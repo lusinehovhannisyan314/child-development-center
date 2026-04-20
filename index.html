@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -18,58 +22,95 @@
       padding: 20px;
       text-align: center;
       color: white;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 32px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .hero {
-      padding: 60px 20px;
+      padding: 90px 20px;
       text-align: center;
-      background: #FFF;
+      background: linear-gradient(to bottom, #ffffff, #F3F8F5);
     }
 
     .hero h2 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      max-width: 600px;
-      margin: auto;
-      font-size: 18px;
+      font-size: 32px;
     }
 
     .btn {
       display: inline-block;
       margin-top: 20px;
-      padding: 12px 24px;
+      padding: 12px 26px;
       background: #A8D5BA;
       color: white;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #8fc9a8;
+      transform: translateY(-2px);
     }
 
     .section {
-      padding: 50px 20px;
+      padding: 70px 20px;
       text-align: center;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    .section.show {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      max-width: 900px;
+      gap: 25px;
+      max-width: 1000px;
       margin: auto;
     }
 
     .card {
       background: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* FORM */
+    .form-container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 16px;
+      margin-top: 20px;
     }
 
     footer {
@@ -77,6 +118,7 @@
       color: white;
       text-align: center;
       padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -88,9 +130,9 @@
 </header>
 
 <section class="hero">
-  <h2>Helping Children Grow, Learn & Thrive</h2>
-  <p>We support early childhood development through play-based learning, therapy, and personalized care.</p>
-  <a href="#contact" class="btn">Contact Us</a>
+  <h2>Helping Children Grow with Confidence</h2>
+  <p>Safe, nurturing, and engaging development programs for every child.</p>
+  <a href="#booking" class="btn">Book Appointment</a>
 </section>
 
 <section class="section">
@@ -98,33 +140,79 @@
   <div class="services">
     <div class="card">
       <h3>Speech Therapy</h3>
-      <p>Helping children improve communication skills.</p>
+      <p>Improving communication skills.</p>
     </div>
     <div class="card">
       <h3>Early Learning</h3>
-      <p>Fun and engaging programs for young minds.</p>
+      <p>Play-based structured programs.</p>
     </div>
     <div class="card">
       <h3>Behavior Support</h3>
-      <p>Guidance for emotional and social development.</p>
+      <p>Emotional and social growth.</p>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <h2>About Us</h2>
-  <p>Our center provides a safe, nurturing environment where every child is encouraged to reach their full potential.</p>
+  <h2>Why Parents Trust Us</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Qualified Specialists</h3>
+      <p>Professional and experienced staff.</p>
+    </div>
+    <div class="card">
+      <h3>Safe Environment</h3>
+      <p>Clean and child-friendly space.</p>
+    </div>
+    <div class="card">
+      <h3>Personal Care</h3>
+      <p>Individual attention for every child.</p>
+    </div>
+  </div>
 </section>
 
-<section class="section" id="contact">
-  <h2>Contact Us</h2>
-  <p>Email: info@yourcenter.com</p>
-  <p>Phone: +123 456 7890</p>
+<!-- BOOKING FORM -->
+<section class="section" id="booking">
+  <h2>Book an Appointment</h2>
+  <div class="form-container">
+    <form>
+      <input type="text" placeholder="Parent Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <input type="date" required>
+      <textarea rows="4" placeholder="Tell us about your child"></textarea>
+      <button class="btn" type="submit">Submit</button>
+    </form>
+  </div>
+</section>
+
+<!-- GOOGLE MAP -->
+<section class="section">
+  <h2>Our Location</h2>
+  <p>Visit us in Vedi, Armenia</p>
+
+  <iframe 
+    src="https://maps.google.com/maps?q=Vedi%20Armenia&t=&z=13&ie=UTF8&iwloc=&output=embed">
+  </iframe>
 </section>
 
 <footer>
   <p>© 2026 Bright Steps Child Development Center</p>
 </footer>
+
+<script>
+  // SCROLL ANIMATION
+  const sections = document.querySelectorAll('.section');
+
+  window.addEventListener('scroll', () => {
+    sections.forEach(section => {
+      const top = section.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        section.classList.add('show');
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
