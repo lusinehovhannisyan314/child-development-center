@@ -19,11 +19,6 @@ header {
   top:0;
 }
 
-.logo {
-  font-size:24px;
-  font-weight:bold;
-}
-
 nav a {
   margin:0 10px;
   color:white;
@@ -118,7 +113,8 @@ footer {
 <body>
 
 <header>
-  <div class="logo">🌱 Bright Steps</div>
+  <div style="font-size:22px;font-weight:bold;">Bright Steps Child Development Center</div>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="programs.html">Programs</a>
@@ -164,27 +160,7 @@ footer {
   <h2 class="am" style="display:none;">Աշխատանքային ժամեր</h2>
 
   <p class="en">Monday – Friday: 09:00 – 18:00</p>
-  <p class="am" style="display:none;">Երկուշաբթի - Ուրբաթ՝ 09:00 – 18:00</p>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="section">
-  <h2>What Parents Say</h2>
-  <div class="services">
-    <div class="card">"Amazing care and attention!" - Anna</div>
-    <div class="card">"Very professional and kind team." - David</div>
-    <div class="card">"Highly recommend this center." - Mariam</div>
-  </div>
-</section>
-
-<!-- TRUST -->
-<section class="section">
-  <h2>Why Choose Us</h2>
-  <div class="services">
-    <div class="card">Certified Specialists</div>
-    <div class="card">Safe Environment</div>
-    <div class="card">Individual Approach</div>
-  </div>
+  <p class="am" style="display:none;">Երկուշաբթի – Ուրբաթ՝ 09:00 – 18:00</p>
 </section>
 
 <!-- BOOKING -->
@@ -206,6 +182,7 @@ footer {
 <!-- MAP -->
 <section class="section">
   <h2>Our Location</h2>
+
   <iframe src="https://maps.google.com/maps?q=Vedi%20Armenia&z=13&output=embed"
   style="width:100%;height:300px;border:none;border-radius:15px;"></iframe>
 </section>
@@ -215,7 +192,6 @@ footer {
 </footer>
 
 <script>
-// ANIMATION
 const sections=document.querySelectorAll('.section');
 window.addEventListener('scroll',()=>{
   sections.forEach(sec=>{
@@ -225,7 +201,6 @@ window.addEventListener('scroll',()=>{
   });
 });
 
-// LANGUAGE TOGGLE
 function toggleLang() {
   document.querySelectorAll('.en').forEach(el=>{
     el.style.display = el.style.display==='none' ? 'block' : 'none';
