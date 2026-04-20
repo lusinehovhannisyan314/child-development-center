@@ -6,116 +6,70 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-html { scroll-behavior: smooth; }
+html {scroll-behavior:smooth;}
+body {margin:0;font-family:'Segoe UI';background:#F9F7F3;color:#333;}
 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #F9F7F3;
-  color: #333;
-}
-
-/* HEADER */
 header {
-  background: #A8D5BA;
-  padding: 15px;
-  text-align: center;
-  color: white;
-  position: sticky;
-  top: 0;
+  background:#A8D5BA;color:white;text-align:center;
+  padding:15px;position:sticky;top:0;
 }
 
 nav a {
-  margin: 0 10px;
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
+  margin:0 10px;color:white;text-decoration:none;font-weight:500;
 }
 
-/* HERO */
 .hero {
-  padding: 90px 20px;
-  text-align: center;
-  background: url('https://images.unsplash.com/photo-1588072432836-e10032774350') center/cover;
-  color: white;
+  padding:80px 20px;text-align:center;
+  background:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf') center/cover;
+  color:white;
 }
 
-.hero h2 {
-  font-size: 34px;
-}
+.hero h2 {font-size:34px;background:rgba(0,0,0,0.4);display:inline-block;padding:10px 20px;border-radius:10px;}
 
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 26px;
-  background: #A8D5BA;
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-}
-
-/* SECTIONS */
 .section {
-  padding: 70px 20px;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.8s;
+  padding:60px 20px;text-align:center;
+  opacity:0;transform:translateY(40px);
+  transition:0.8s;
 }
+.section.show {opacity:1;transform:translateY(0);}
 
-.section.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap: 20px;
-  max-width: 1000px;
-  margin: auto;
+.services {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;max-width:1000px;margin:auto;
 }
 
 .card {
-  background: white;
-  padding: 25px;
-  border-radius: 16px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  background:white;padding:20px;border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
 
-/* FORM */
-.form-container {
-  max-width: 600px;
-  margin: auto;
-  background: white;
-  padding: 30px;
-  border-radius: 16px;
+.form-box {
+  max-width:600px;margin:auto;background:white;
+  padding:25px;border-radius:15px;
 }
 
 input, textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 8px;
-  border: 1px solid #ddd;
+  width:100%;padding:12px;margin:10px 0;
+  border-radius:8px;border:1px solid #ddd;
 }
 
-/* MAP */
-iframe {
-  width: 100%;
-  height: 300px;
-  border: none;
-  border-radius: 16px;
+.btn {
+  background:#A8D5BA;color:white;
+  padding:12px 20px;border:none;border-radius:25px;
+  cursor:pointer;
 }
 
-/* FOOTER */
+img.section-img {
+  width:100%;
+  max-width:700px;
+  border-radius:15px;
+  margin:20px 0;
+}
+
 footer {
-  background: #A8D5BA;
-  color: white;
-  text-align: center;
-  padding: 20px;
+  background:#A8D5BA;color:white;
+  text-align:center;padding:20px;
 }
 </style>
 </head>
@@ -127,81 +81,72 @@ footer {
   <nav>
     <a href="index.html">Home</a>
     <a href="programs.html">Programs</a>
+    <a href="#booking">Book</a>
   </nav>
 </header>
 
 <section class="hero">
   <h2>Helping Children Grow & Thrive</h2>
-  <p>Professional care in a safe and nurturing environment</p>
-  <a href="#booking" class="btn">Book Appointment</a>
 </section>
 
 <section class="section">
   <h2>Our Specialists</h2>
-  <div class="grid">
-    <div class="card">🗣 Logoped</div>
-    <div class="card">👩‍⚕️ Social Worker</div>
-    <div class="card">📚 Social Pedagog</div>
-    <div class="card">🏃 Physical Activity Specialist</div>
-    <div class="card">🎨 Art Therapy Specialist</div>
+
+  <img class="section-img" src="https://images.unsplash.com/photo-1588072432836-e10032774350">
+
+  <div class="services">
+    <div class="card">Speech Therapist</div>
+    <div class="card">Social Worker</div>
+    <div class="card">Social Pedagog</div>
+    <div class="card">Physical Education Specialist</div>
+    <div class="card">Art Therapy Specialist</div>
   </div>
 </section>
 
 <section class="section">
-  <h2>How We Work</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Individual Sessions</h3>
-      <p>Personalized attention for each child</p>
-    </div>
-    <div class="card">
-      <h3>Group Sessions</h3>
-      <p>Social interaction and teamwork development</p>
-    </div>
+  <h2>Working Methods</h2>
+  <div class="services">
+    <div class="card">Individual Sessions</div>
+    <div class="card">Group Activities</div>
   </div>
 </section>
 
 <section class="section">
   <h2>Working Hours</h2>
-  <p>Monday – Friday</p>
-  <p><strong>09:00 – 18:00</strong></p>
+  <p>Monday – Friday: 09:00 – 18:00</p>
 </section>
 
 <!-- FORM -->
 <section class="section" id="booking">
   <h2>Book Appointment</h2>
-  <div class="form-container">
 
-    <!-- 🔥 REPLACE ACTION LINK -->
-    <form action="https://formspree.io/f/xxxxx" method="POST">
-
+  <div class="form-box">
+    <form action="https://formspree.io/f/YOUR_ID" method="POST">
       <input type="text" name="name" placeholder="Parent Name" required>
       <input type="email" name="email" placeholder="Email" required>
       <input type="tel" name="phone" placeholder="Phone" required>
       <input type="date" name="date" required>
       <textarea name="message" placeholder="Child details"></textarea>
-
-      <button class="btn" type="submit">Send</button>
+      <button class="btn" type="submit">Send Request</button>
     </form>
-
   </div>
 </section>
 
 <section class="section">
   <h2>Our Location</h2>
-  <iframe src="https://maps.google.com/maps?q=Vedi%20Armenia&output=embed"></iframe>
+  <iframe src="https://maps.google.com/maps?q=Vedi%20Armenia&z=13&output=embed"
+  style="width:100%;height:300px;border-radius:15px;border:none;"></iframe>
 </section>
 
 <footer>
-  <p>© 2026 Bright Steps Center</p>
+  <p>© 2026 Bright Steps Child Development Center</p>
 </footer>
 
 <script>
-const sections = document.querySelectorAll('.section');
-
-window.addEventListener('scroll', () => {
-  sections.forEach(sec => {
-    if (sec.getBoundingClientRect().top < window.innerHeight - 100) {
+const sections=document.querySelectorAll('.section');
+window.addEventListener('scroll',()=>{
+  sections.forEach(sec=>{
+    if(sec.getBoundingClientRect().top<window.innerHeight-100){
       sec.classList.add('show');
     }
   });
