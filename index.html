@@ -9,67 +9,108 @@
 html {scroll-behavior:smooth;}
 body {margin:0;font-family:'Segoe UI';background:#F9F7F3;color:#333;}
 
+/* HEADER */
 header {
-  background:#A8D5BA;color:white;text-align:center;
-  padding:15px;position:sticky;top:0;
+  background:#A8D5BA;
+  color:white;
+  padding:15px;
+  text-align:center;
+  position:sticky;
+  top:0;
+}
+
+.logo {
+  font-size:24px;
+  font-weight:bold;
 }
 
 nav a {
-  margin:0 10px;color:white;text-decoration:none;font-weight:500;
+  margin:0 10px;
+  color:white;
+  text-decoration:none;
 }
 
+.lang-btn {
+  margin-left:10px;
+  padding:6px 10px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* HERO */
 .hero {
-  padding:80px 20px;text-align:center;
-  background:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf') center/cover;
+  padding:80px 20px;
+  text-align:center;
+  background:url('https://images.unsplash.com/photo-1588072432836-e10032774350') center/cover;
   color:white;
 }
 
-.hero h2 {font-size:34px;background:rgba(0,0,0,0.4);display:inline-block;padding:10px 20px;border-radius:10px;}
+.hero h2 {
+  background:rgba(0,0,0,0.5);
+  display:inline-block;
+  padding:10px 20px;
+  border-radius:10px;
+}
 
+/* SECTIONS */
 .section {
-  padding:60px 20px;text-align:center;
-  opacity:0;transform:translateY(40px);
+  padding:60px 20px;
+  text-align:center;
+  opacity:0;
+  transform:translateY(40px);
   transition:0.8s;
 }
 .section.show {opacity:1;transform:translateY(0);}
 
+/* CARDS */
 .services {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;max-width:1000px;margin:auto;
+  gap:20px;
+  max-width:1000px;
+  margin:auto;
 }
 
 .card {
-  background:white;padding:20px;border-radius:15px;
+  background:white;
+  padding:20px;
+  border-radius:15px;
   box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
 
+/* FORM */
 .form-box {
-  max-width:600px;margin:auto;background:white;
-  padding:25px;border-radius:15px;
+  max-width:600px;
+  margin:auto;
+  background:white;
+  padding:25px;
+  border-radius:15px;
 }
 
 input, textarea {
-  width:100%;padding:12px;margin:10px 0;
-  border-radius:8px;border:1px solid #ddd;
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:8px;
+  border:1px solid #ddd;
 }
 
 .btn {
-  background:#A8D5BA;color:white;
-  padding:12px 20px;border:none;border-radius:25px;
+  background:#A8D5BA;
+  color:white;
+  padding:12px 20px;
+  border:none;
+  border-radius:25px;
   cursor:pointer;
 }
 
-img.section-img {
-  width:100%;
-  max-width:700px;
-  border-radius:15px;
-  margin:20px 0;
-}
-
+/* FOOTER */
 footer {
-  background:#A8D5BA;color:white;
-  text-align:center;padding:20px;
+  background:#A8D5BA;
+  color:white;
+  text-align:center;
+  padding:20px;
 }
 </style>
 </head>
@@ -77,22 +118,25 @@ footer {
 <body>
 
 <header>
-  <h1>Bright Steps Center</h1>
+  <div class="logo">🌱 Bright Steps</div>
   <nav>
     <a href="index.html">Home</a>
     <a href="programs.html">Programs</a>
     <a href="#booking">Book</a>
+    <button onclick="toggleLang()" class="lang-btn">🇦🇲 / EN</button>
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <h2>Helping Children Grow & Thrive</h2>
+  <h2 class="en">Helping Children Grow with Confidence</h2>
+  <h2 class="am" style="display:none;">Օգնում ենք երեխաներին զարգանալ վստահությամբ</h2>
 </section>
 
+<!-- SPECIALISTS -->
 <section class="section">
-  <h2>Our Specialists</h2>
-
-  <img class="section-img" src="https://images.unsplash.com/photo-1588072432836-e10032774350">
+  <h2 class="en">Our Specialists</h2>
+  <h2 class="am" style="display:none;">Մեր մասնագետները</h2>
 
   <div class="services">
     <div class="card">Speech Therapist</div>
@@ -103,20 +147,47 @@ footer {
   </div>
 </section>
 
+<!-- METHODS -->
 <section class="section">
-  <h2>Working Methods</h2>
+  <h2 class="en">Working Methods</h2>
+  <h2 class="am" style="display:none;">Աշխատանքի մեթոդներ</h2>
+
   <div class="services">
     <div class="card">Individual Sessions</div>
-    <div class="card">Group Activities</div>
+    <div class="card">Group Sessions</div>
   </div>
 </section>
 
+<!-- HOURS -->
 <section class="section">
-  <h2>Working Hours</h2>
-  <p>Monday – Friday: 09:00 – 18:00</p>
+  <h2 class="en">Working Hours</h2>
+  <h2 class="am" style="display:none;">Աշխատանքային ժամեր</h2>
+
+  <p class="en">Monday – Friday: 09:00 – 18:00</p>
+  <p class="am" style="display:none;">Երկուշաբթի - Ուրբաթ՝ 09:00 – 18:00</p>
 </section>
 
-<!-- FORM -->
+<!-- TESTIMONIALS -->
+<section class="section">
+  <h2>What Parents Say</h2>
+  <div class="services">
+    <div class="card">"Amazing care and attention!" - Anna</div>
+    <div class="card">"Very professional and kind team." - David</div>
+    <div class="card">"Highly recommend this center." - Mariam</div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="section">
+  <h2>Why Choose Us</h2>
+  <div class="services">
+    <div class="card">Certified Specialists</div>
+    <div class="card">Safe Environment</div>
+    <div class="card">Individual Approach</div>
+  </div>
+</section>
+
+<!-- BOOKING -->
 <section class="section" id="booking">
   <h2>Book Appointment</h2>
 
@@ -132,10 +203,11 @@ footer {
   </div>
 </section>
 
+<!-- MAP -->
 <section class="section">
   <h2>Our Location</h2>
   <iframe src="https://maps.google.com/maps?q=Vedi%20Armenia&z=13&output=embed"
-  style="width:100%;height:300px;border-radius:15px;border:none;"></iframe>
+  style="width:100%;height:300px;border:none;border-radius:15px;"></iframe>
 </section>
 
 <footer>
@@ -143,6 +215,7 @@ footer {
 </footer>
 
 <script>
+// ANIMATION
 const sections=document.querySelectorAll('.section');
 window.addEventListener('scroll',()=>{
   sections.forEach(sec=>{
@@ -151,6 +224,16 @@ window.addEventListener('scroll',()=>{
     }
   });
 });
+
+// LANGUAGE TOGGLE
+function toggleLang() {
+  document.querySelectorAll('.en').forEach(el=>{
+    el.style.display = el.style.display==='none' ? 'block' : 'none';
+  });
+  document.querySelectorAll('.am').forEach(el=>{
+    el.style.display = el.style.display==='none' ? 'block' : 'none';
+  });
+}
 </script>
 
 </body>
