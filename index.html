@@ -1,217 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Bright Steps Child Development Center</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Bright Steps Child Development Center</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
+<style>
+html { scroll-behavior: smooth; }
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #F9F7F3;
-      color: #333;
-    }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #F9F7F3;
+  color: #333;
+}
 
-    header {
-      background: #A8D5BA;
-      padding: 20px;
-      text-align: center;
-      color: white;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+/* HEADER */
+header {
+  background: #A8D5BA;
+  padding: 15px;
+  text-align: center;
+  color: white;
+  position: sticky;
+  top: 0;
+}
 
-    .hero {
-      padding: 90px 20px;
-      text-align: center;
-      background: linear-gradient(to bottom, #ffffff, #F3F8F5);
-    }
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
 
-    .hero h2 {
-      font-size: 32px;
-    }
+/* HERO */
+.hero {
+  padding: 90px 20px;
+  text-align: center;
+  background: url('https://images.unsplash.com/photo-1588072432836-e10032774350') center/cover;
+  color: white;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 26px;
-      background: #A8D5BA;
-      color: white;
-      text-decoration: none;
-      border-radius: 30px;
-      transition: 0.3s;
-    }
+.hero h2 {
+  font-size: 34px;
+}
 
-    .btn:hover {
-      background: #8fc9a8;
-      transform: translateY(-2px);
-    }
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 26px;
+  background: #A8D5BA;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+}
 
-    .section {
-      padding: 70px 20px;
-      text-align: center;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s ease;
-    }
+/* SECTIONS */
+.section {
+  padding: 70px 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s;
+}
 
-    .section.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-      max-width: 1000px;
-      margin: auto;
-    }
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
 
-    .card {
-      background: #fff;
-      padding: 25px;
-      border-radius: 16px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.05);
-      transition: 0.3s;
-    }
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
+/* FORM */
+.form-container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+}
 
-    /* FORM */
-    .form-container {
-      max-width: 600px;
-      margin: auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.05);
-    }
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
 
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 8px;
-      border: 1px solid #ddd;
-      font-size: 14px;
-    }
+/* MAP */
+iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 16px;
+}
 
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: none;
-      border-radius: 16px;
-      margin-top: 20px;
-    }
-
-    footer {
-      background: #A8D5BA;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
+/* FOOTER */
+footer {
+  background: #A8D5BA;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>Bright Steps Child Development Center</h1>
+  <h1>Bright Steps Center</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="programs.html">Programs</a>
+  </nav>
 </header>
 
 <section class="hero">
-  <h2>Helping Children Grow with Confidence</h2>
-  <p>Safe, nurturing, and engaging development programs for every child.</p>
+  <h2>Helping Children Grow & Thrive</h2>
+  <p>Professional care in a safe and nurturing environment</p>
   <a href="#booking" class="btn">Book Appointment</a>
 </section>
 
 <section class="section">
-  <h2>Our Services</h2>
-  <div class="services">
+  <h2>Our Specialists</h2>
+  <div class="grid">
+    <div class="card">🗣 Logoped</div>
+    <div class="card">👩‍⚕️ Social Worker</div>
+    <div class="card">📚 Social Pedagog</div>
+    <div class="card">🏃 Physical Activity Specialist</div>
+    <div class="card">🎨 Art Therapy Specialist</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>How We Work</h2>
+  <div class="grid">
     <div class="card">
-      <h3>Speech Therapy</h3>
-      <p>Improving communication skills.</p>
+      <h3>Individual Sessions</h3>
+      <p>Personalized attention for each child</p>
     </div>
     <div class="card">
-      <h3>Early Learning</h3>
-      <p>Play-based structured programs.</p>
-    </div>
-    <div class="card">
-      <h3>Behavior Support</h3>
-      <p>Emotional and social growth.</p>
+      <h3>Group Sessions</h3>
+      <p>Social interaction and teamwork development</p>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <h2>Why Parents Trust Us</h2>
-  <div class="services">
-    <div class="card">
-      <h3>Qualified Specialists</h3>
-      <p>Professional and experienced staff.</p>
-    </div>
-    <div class="card">
-      <h3>Safe Environment</h3>
-      <p>Clean and child-friendly space.</p>
-    </div>
-    <div class="card">
-      <h3>Personal Care</h3>
-      <p>Individual attention for every child.</p>
-    </div>
-  </div>
+  <h2>Working Hours</h2>
+  <p>Monday – Friday</p>
+  <p><strong>09:00 – 18:00</strong></p>
 </section>
 
-<!-- BOOKING FORM -->
+<!-- FORM -->
 <section class="section" id="booking">
-  <h2>Book an Appointment</h2>
+  <h2>Book Appointment</h2>
   <div class="form-container">
-    <form>
-      <input type="text" placeholder="Parent Name" required>
-      <input type="email" placeholder="Email" required>
-      <input type="tel" placeholder="Phone Number" required>
-      <input type="date" required>
-      <textarea rows="4" placeholder="Tell us about your child"></textarea>
-      <button class="btn" type="submit">Submit</button>
+
+    <!-- 🔥 REPLACE ACTION LINK -->
+    <form action="https://formspree.io/f/xxxxx" method="POST">
+
+      <input type="text" name="name" placeholder="Parent Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Phone" required>
+      <input type="date" name="date" required>
+      <textarea name="message" placeholder="Child details"></textarea>
+
+      <button class="btn" type="submit">Send</button>
     </form>
+
   </div>
 </section>
 
-<!-- GOOGLE MAP -->
 <section class="section">
   <h2>Our Location</h2>
-  <p>Visit us in Vedi, Armenia</p>
-
-  <iframe 
-    src="https://maps.google.com/maps?q=Vedi%20Armenia&t=&z=13&ie=UTF8&iwloc=&output=embed">
-  </iframe>
+  <iframe src="https://maps.google.com/maps?q=Vedi%20Armenia&output=embed"></iframe>
 </section>
 
 <footer>
-  <p>© 2026 Bright Steps Child Development Center</p>
+  <p>© 2026 Bright Steps Center</p>
 </footer>
 
 <script>
-  // SCROLL ANIMATION
-  const sections = document.querySelectorAll('.section');
+const sections = document.querySelectorAll('.section');
 
-  window.addEventListener('scroll', () => {
-    sections.forEach(section => {
-      const top = section.getBoundingClientRect().top;
-      if (top < window.innerHeight - 100) {
-        section.classList.add('show');
-      }
-    });
+window.addEventListener('scroll', () => {
+  sections.forEach(sec => {
+    if (sec.getBoundingClientRect().top < window.innerHeight - 100) {
+      sec.classList.add('show');
+    }
   });
+});
 </script>
 
 </body>
