@@ -19,10 +19,19 @@ header {
   top:0;
 }
 
+nav {
+  margin-top:10px;
+}
+
 nav a {
   margin:0 10px;
   color:white;
   text-decoration:none;
+  font-weight:bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 .lang-btn {
@@ -46,6 +55,12 @@ nav a {
   display:inline-block;
   padding:10px 20px;
   border-radius:10px;
+  animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform:translateY(20px);}
+  to {opacity:1; transform:translateY(0);}
 }
 
 /* SECTIONS */
@@ -100,6 +115,10 @@ input, textarea {
   cursor:pointer;
 }
 
+.btn:hover {
+  background:#8fc9a8;
+}
+
 /* FOOTER */
 footer {
   background:#A8D5BA;
@@ -117,8 +136,8 @@ footer {
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="programs.html">Programs</a>
-    <a href="advice.html">Advice</a>
+    <a href="programs.html" target="_blank">Programs</a>
+    <a href="advice.html" target="_blank" rel="noopener noreferrer">Advice</a>
     <a href="#booking">Book</a>
     <button onclick="toggleLang()" class="lang-btn">🇦🇲 / EN</button>
   </nav>
@@ -184,7 +203,7 @@ footer {
 <section class="section">
   <h2>Our Location</h2>
 
-  <iframe src="https://maps.google.com/maps?q=Vedi%20Armenia&z=13&output=embed"
+  <iframe src="https://maps.google.com/maps?q=Yerevan%20Armenia&z=13&output=embed"
   style="width:100%;height:300px;border:none;border-radius:15px;"></iframe>
 </section>
 
@@ -194,6 +213,7 @@ footer {
 
 <script>
 const sections=document.querySelectorAll('.section');
+
 window.addEventListener('scroll',()=>{
   sections.forEach(sec=>{
     if(sec.getBoundingClientRect().top<window.innerHeight-100){
@@ -202,12 +222,17 @@ window.addEventListener('scroll',()=>{
   });
 });
 
+let isEnglish = true;
+
 function toggleLang() {
+  isEnglish = !isEnglish;
+
   document.querySelectorAll('.en').forEach(el=>{
-    el.style.display = el.style.display==='none' ? 'block' : 'none';
+    el.style.display = isEnglish ? 'block' : 'none';
   });
+
   document.querySelectorAll('.am').forEach(el=>{
-    el.style.display = el.style.display==='none' ? 'block' : 'none';
+    el.style.display = isEnglish ? 'none' : 'block';
   });
 }
 </script>
