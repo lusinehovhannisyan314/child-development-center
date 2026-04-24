@@ -118,22 +118,17 @@ footer {
   <nav>
     <a href="index.html">Home</a>
     <a href="programs.html">Programs</a>
-
-    <!-- ✅ ONLY CHANGE HERE -->
     <a href="#" onclick="openAdvice()">Advice</a>
-
     <a href="#booking">Book</a>
     <button onclick="toggleLang()" class="lang-btn">🇦🇲 / EN</button>
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <h2 class="en">Helping Children Grow with Confidence</h2>
   <h2 class="am" style="display:none;">Օգնում ենք երեխաներին զարգանալ վստահությամբ</h2>
 </section>
 
-<!-- SPECIALISTS -->
 <section class="section">
   <h2 class="en">Our Specialists</h2>
   <h2 class="am" style="display:none;">Մեր մասնագետները</h2>
@@ -147,7 +142,6 @@ footer {
   </div>
 </section>
 
-<!-- METHODS -->
 <section class="section">
   <h2 class="en">Working Methods</h2>
   <h2 class="am" style="display:none;">Աշխատանքի մեթոդներ</h2>
@@ -158,7 +152,6 @@ footer {
   </div>
 </section>
 
-<!-- HOURS -->
 <section class="section">
   <h2 class="en">Working Hours</h2>
   <h2 class="am" style="display:none;">Աշխատանքային ժամեր</h2>
@@ -167,7 +160,6 @@ footer {
   <p class="am" style="display:none;">Երկուշաբթի – Ուրբաթ՝ 09:00 – 18:00</p>
 </section>
 
-<!-- BOOKING -->
 <section class="section" id="booking">
   <h2>Book Appointment</h2>
 
@@ -183,7 +175,6 @@ footer {
   </div>
 </section>
 
-<!-- MAP -->
 <section class="section">
   <h2>Our Location</h2>
 
@@ -214,61 +205,69 @@ function toggleLang() {
   });
 }
 
-/* ✅ NEW TAB ADVICE PAGE */
+/* UPDATED ADVICE CONTENT */
 function openAdvice() {
   const newWindow = window.open("", "_blank");
 
   newWindow.document.write(`
-    <html>
-    <head>
-      <title>Advice for Parents</title>
-      <style>
-        body {
-          font-family: Arial;
-          padding: 40px;
-          background:#F4FBF7;
-          color:#2c2c2c;
-          line-height:1.6;
-        }
-        h1 {color:#A8D5BA;}
-      </style>
-    </head>
-    <body>
+  <html>
+  <head>
+    <title>Advice for Parents</title>
+    <style>
+      body {
+        font-family: Arial;
+        padding: 40px;
+        background:#F4FBF7;
+        color:#2c2c2c;
+        line-height:1.7;
+      }
+      h1, h2 {color:#A8D5BA;}
+      ul {margin-bottom:20px;}
+    </style>
+  </head>
 
-    <h1>The Power of Play in Strengthening Bonds</h1>
+  <body>
 
-    <p>
-    Playtime is not just a fun activity for children but also a powerful tool for building strong sibling bonds.
-    When siblings play together, they learn essential skills such as cooperation, communication, and problem-solving.
-    </p>
+  <h1>Exploring the Great Outdoors: Camping with Kids</h1>
 
-    <ul>
-      <li>Playtime allows siblings to interact in a relaxed setting</li>
-      <li>They learn cooperation and teamwork</li>
-      <li>Communication skills improve</li>
-      <li>Problem-solving develops naturally</li>
-    </ul>
+  <p>
+  As the weather warms up, camping becomes a perfect way for families to reconnect with nature
+  and create unforgettable memories together.
+  </p>
 
-    <h2>Creating Shared Memories Through Play</h2>
-    <p>
-    Playing together creates beautiful memories that last for years.
-    Activities like games, dancing, or building things strengthen family unity.
-    </p>
+  <h2>Introducing Kids to Outdoor Adventure</h2>
+  <ul>
+    <li>Setting up a tent builds confidence and independence</li>
+    <li>Learning to build a safe campfire teaches responsibility</li>
+    <li>Navigating trails develops awareness and problem-solving skills</li>
+  </ul>
 
-    <h2>The Unique Bond of Siblings</h2>
-    <p>
-    Siblings are often each other’s first friends. Their bond grows through shared experiences
-    and helps develop emotional intelligence and social skills.
-    </p>
+  <h2>Thrilling Wilderness Adventures</h2>
+  <ul>
+    <li>Hiking through forests</li>
+    <li>Playing in streams</li>
+    <li>Stargazing under the night sky</li>
+    <li>Spotting wildlife</li>
+  </ul>
 
-    <h2>The Lasting Benefits of Play</h2>
-    <p>
-    Simple activities like puzzles, games, or playing together can build a strong,
-    lasting bond that benefits children for years.
-    </p>
+  <h2>A Unique Bonding Experience</h2>
+  <ul>
+    <li>Roasting marshmallows</li>
+    <li>Storytelling together</li>
+    <li>Enjoying quiet peaceful moments</li>
+    <li>Creating family traditions</li>
+  </ul>
 
-    </body>
-    </html>
+  <h2>Creating Lasting Memories</h2>
+  <ul>
+    <li>Packing gear together</li>
+    <li>Exploring campgrounds</li>
+    <li>Adventuring in nature</li>
+    <li>Documenting the trip</li>
+  </ul>
+
+  </body>
+  </html>
   `);
 }
 </script>
