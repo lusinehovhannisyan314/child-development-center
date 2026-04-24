@@ -9,6 +9,7 @@
 html {scroll-behavior:smooth;}
 body {margin:0;font-family:'Segoe UI';background:#F9F7F3;color:#333;}
 
+/* HEADER */
 header {
   background:#A8D5BA;
   color:white;
@@ -22,9 +23,17 @@ nav a {
   margin:0 10px;
   color:white;
   text-decoration:none;
-  font-weight:bold;
 }
 
+.lang-btn {
+  margin-left:10px;
+  padding:6px 10px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* HERO */
 .hero {
   padding:80px 20px;
   text-align:center;
@@ -39,11 +48,17 @@ nav a {
   border-radius:10px;
 }
 
+/* SECTIONS */
 .section {
   padding:60px 20px;
   text-align:center;
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.8s;
 }
+.section.show {opacity:1;transform:translateY(0);}
 
+/* CARDS */
 .services {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -59,6 +74,33 @@ nav a {
   box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
 
+/* FORM */
+.form-box {
+  max-width:600px;
+  margin:auto;
+  background:white;
+  padding:25px;
+  border-radius:15px;
+}
+
+input, textarea {
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:8px;
+  border:1px solid #ddd;
+}
+
+.btn {
+  background:#A8D5BA;
+  color:white;
+  padding:12px 20px;
+  border:none;
+  border-radius:25px;
+  cursor:pointer;
+}
+
+/* FOOTER */
 footer {
   background:#A8D5BA;
   color:white;
@@ -74,22 +116,27 @@ footer {
   <div style="font-size:22px;font-weight:bold;">Bright Steps Child Development Center</div>
 
   <nav>
-    <a href="#">Home</a>
+    <a href="index.html">Home</a>
     <a href="programs.html">Programs</a>
 
-    <!-- 🔥 THIS IS THE MAGIC BUTTON -->
+    <!-- ✅ ONLY CHANGE HERE -->
     <a href="#" onclick="openAdvice()">Advice</a>
 
     <a href="#booking">Book</a>
+    <button onclick="toggleLang()" class="lang-btn">🇦🇲 / EN</button>
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <h2>Helping Children Grow with Confidence</h2>
+  <h2 class="en">Helping Children Grow with Confidence</h2>
+  <h2 class="am" style="display:none;">Օգնում ենք երեխաներին զարգանալ վստահությամբ</h2>
 </section>
 
+<!-- SPECIALISTS -->
 <section class="section">
-  <h2>Our Specialists</h2>
+  <h2 class="en">Our Specialists</h2>
+  <h2 class="am" style="display:none;">Մեր մասնագետները</h2>
 
   <div class="services">
     <div class="card">Speech Therapist</div>
@@ -100,13 +147,75 @@ footer {
   </div>
 </section>
 
+<!-- METHODS -->
+<section class="section">
+  <h2 class="en">Working Methods</h2>
+  <h2 class="am" style="display:none;">Աշխատանքի մեթոդներ</h2>
+
+  <div class="services">
+    <div class="card">Individual Sessions</div>
+    <div class="card">Group Sessions</div>
+  </div>
+</section>
+
+<!-- HOURS -->
+<section class="section">
+  <h2 class="en">Working Hours</h2>
+  <h2 class="am" style="display:none;">Աշխատանքային ժամեր</h2>
+
+  <p class="en">Monday – Friday: 09:00 – 18:00</p>
+  <p class="am" style="display:none;">Երկուշաբթի – Ուրբաթ՝ 09:00 – 18:00</p>
+</section>
+
+<!-- BOOKING -->
+<section class="section" id="booking">
+  <h2>Book Appointment</h2>
+
+  <div class="form-box">
+    <form action="https://formspree.io/f/YOUR_ID" method="POST">
+      <input type="text" name="name" placeholder="Parent Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Phone" required>
+      <input type="date" name="date" required>
+      <textarea name="message" placeholder="Child details"></textarea>
+      <button class="btn" type="submit">Send Request</button>
+    </form>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="section">
+  <h2>Our Location</h2>
+
+  <iframe src="https://maps.google.com/maps?q=Vedi%20Armenia&z=13&output=embed"
+  style="width:100%;height:300px;border:none;border-radius:15px;"></iframe>
+</section>
+
 <footer>
   <p>© 2026 Bright Steps Child Development Center</p>
 </footer>
 
 <script>
-function openAdvice() {
+const sections=document.querySelectorAll('.section');
+window.addEventListener('scroll',()=>{
+  sections.forEach(sec=>{
+    if(sec.getBoundingClientRect().top<window.innerHeight-100){
+      sec.classList.add('show');
+    }
+  });
+});
 
+function toggleLang() {
+  document.querySelectorAll('.en').forEach(el=>{
+    el.style.display = el.style.display==='none' ? 'block' : 'none';
+  });
+  document.querySelectorAll('.am').forEach(el=>{
+    el.style.display = el.style.display==='none' ? 'block' : 'none';
+  });
+}
+
+/* ✅ NEW TAB ADVICE PAGE */
+function openAdvice() {
   const newWindow = window.open("", "_blank");
 
   newWindow.document.write(`
@@ -124,7 +233,6 @@ function openAdvice() {
         h1 {color:#A8D5BA;}
       </style>
     </head>
-
     <body>
 
     <h1>The Power of Play in Strengthening Bonds</h1>
@@ -142,21 +250,18 @@ function openAdvice() {
     </ul>
 
     <h2>Creating Shared Memories Through Play</h2>
-
     <p>
     Playing together creates beautiful memories that last for years.
     Activities like games, dancing, or building things strengthen family unity.
     </p>
 
     <h2>The Unique Bond of Siblings</h2>
-
     <p>
     Siblings are often each other’s first friends. Their bond grows through shared experiences
     and helps develop emotional intelligence and social skills.
     </p>
 
     <h2>The Lasting Benefits of Play</h2>
-
     <p>
     Simple activities like puzzles, games, or playing together can build a strong,
     lasting bond that benefits children for years.
