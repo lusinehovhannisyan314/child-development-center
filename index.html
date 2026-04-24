@@ -24,14 +24,6 @@ nav a {
   text-decoration:none;
 }
 
-.lang-btn {
-  margin-left:10px;
-  padding:6px 10px;
-  border:none;
-  border-radius:8px;
-  cursor:pointer;
-}
-
 .hero {
   padding:80px 20px;
   text-align:center;
@@ -49,11 +41,7 @@ nav a {
 .section {
   padding:60px 20px;
   text-align:center;
-  opacity:0;
-  transform:translateY(40px);
-  transition:0.8s;
 }
-.section.show {opacity:1;transform:translateY(0);}
 
 .services {
   display:grid;
@@ -68,31 +56,6 @@ nav a {
   padding:20px;
   border-radius:15px;
   box-shadow:0 5px 15px rgba(0,0,0,0.05);
-}
-
-.form-box {
-  max-width:600px;
-  margin:auto;
-  background:white;
-  padding:25px;
-  border-radius:15px;
-}
-
-input, textarea {
-  width:100%;
-  padding:12px;
-  margin:10px 0;
-  border-radius:8px;
-  border:1px solid #ddd;
-}
-
-.btn {
-  background:#A8D5BA;
-  color:white;
-  padding:12px 20px;
-  border:none;
-  border-radius:25px;
-  cursor:pointer;
 }
 
 footer {
@@ -112,20 +75,20 @@ footer {
   <nav>
     <a href="index.html">Home</a>
     <a href="programs.html">Programs</a>
+
+    <!-- Advice opens in new tab -->
     <a href="#" onclick="openAdvice()">Advice</a>
+
     <a href="#booking">Book</a>
-    <button onclick="toggleLang()" class="lang-btn">🇦🇲 / EN</button>
   </nav>
 </header>
 
 <section class="hero">
-  <h2 class="en">Helping Children Grow with Confidence</h2>
-  <h2 class="am" style="display:none;">Օգնում ենք երեխաներին զարգանալ վստահությամբ</h2>
+  <h2>Helping Children Grow with Confidence</h2>
 </section>
 
 <section class="section">
-  <h2 class="en">Our Specialists</h2>
-  <h2 class="am" style="display:none;">Մեր մասնագետները</h2>
+  <h2>Our Specialists</h2>
 
   <div class="services">
     <div class="card">Speech Therapist</div>
@@ -136,70 +99,11 @@ footer {
   </div>
 </section>
 
-<section class="section">
-  <h2 class="en">Working Methods</h2>
-  <h2 class="am" style="display:none;">Աշխատանքի մեթոդներ</h2>
-
-  <div class="services">
-    <div class="card">Individual Sessions</div>
-    <div class="card">Group Sessions</div>
-  </div>
-</section>
-
-<section class="section">
-  <h2 class="en">Working Hours</h2>
-  <h2 class="am" style="display:none;">Աշխատանքային ժամեր</h2>
-
-  <p class="en">Monday – Friday: 09:00 – 18:00</p>
-  <p class="am" style="display:none;">Երկուշաբթի – Ուրբաթ՝ 09:00 – 18:00</p>
-</section>
-
-<section class="section" id="booking">
-  <h2>Book Appointment</h2>
-
-  <div class="form-box">
-    <form action="https://formspree.io/f/YOUR_ID" method="POST">
-      <input type="text" name="name" placeholder="Parent Name" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <input type="tel" name="phone" placeholder="Phone" required>
-      <input type="date" name="date" required>
-      <textarea name="message" placeholder="Child details"></textarea>
-      <button class="btn" type="submit">Send Request</button>
-    </form>
-  </div>
-</section>
-
-<section class="section">
-  <h2>Our Location</h2>
-
-  <iframe src="https://maps.google.com/maps?q=Vedi%20Armenia&z=13&output=embed"
-  style="width:100%;height:300px;border:none;border-radius:15px;"></iframe>
-</section>
-
 <footer>
   <p>© 2026 Bright Steps Child Development Center</p>
 </footer>
 
 <script>
-const sections=document.querySelectorAll('.section');
-window.addEventListener('scroll',()=>{
-  sections.forEach(sec=>{
-    if(sec.getBoundingClientRect().top<window.innerHeight-100){
-      sec.classList.add('show');
-    }
-  });
-});
-
-function toggleLang() {
-  document.querySelectorAll('.en').forEach(el=>{
-    el.style.display = el.style.display==='none' ? 'block' : 'none';
-  });
-  document.querySelectorAll('.am').forEach(el=>{
-    el.style.display = el.style.display==='none' ? 'block' : 'none';
-  });
-}
-
-/* FULL ORIGINAL TEXT — NOTHING REMOVED */
 function openAdvice() {
   const newWindow = window.open("", "_blank");
 
@@ -215,48 +119,33 @@ function openAdvice() {
         color:#2c2c2c;
         line-height:1.7;
       }
-      h1, h2 {color:#A8D5BA;}
+      h1 {color:#A8D5BA;}
     </style>
   </head>
 
   <body>
 
-  <h1>Exploring the Great Outdoors: Camping with Kids</h1>
+  <h1>The Power of Play in Strengthening Bonds</h1>
 
-  <p>As the weather warms up and the days grow longer, many families are eager to spend time outdoors and explore the wonders of nature. One of the best ways to immerse yourself in the great outdoors’s beauty is by camping with your kids. Camping allows families to disconnect from the hustle and bustle of everyday life and reconnect with nature, all while creating unforgettable memories that will last a lifetime.</p>
+  <p>Playtime is not just a fun activity for children but also a powerful tool for building strong sibling bonds. When siblings play together, they learn essential skills such as cooperation, communication, and problem-solving. When practiced during play, these skills can translate into their everyday interactions and help them build a solid and lasting relationship.</p>
 
-  <h2>Introducing Kids to Outdoor Adventure</h2>
-  <p>Camping with kids is a fantastic way to introduce them to the joys of outdoor adventure and nature exploration.</p>
+  <p>Playtime allows siblings to interact in a relaxed and enjoyable setting. Through play, they practice cooperation by working towards a common goal. Communication skills are enhanced as they negotiate roles and rules. Problem-solving abilities are developed when they face challenges together.</p>
 
-  <ul>
-    <li>Setting up a Tent: Teach kids how to assemble and secure the tent</li>
-    <li>Building a Campfire: Show children how to safely gather wood and light a fire</li>
-    <li>Navigating Hiking Trails: Equip kids with a map and guide them</li>
-  </ul>
+  <h2>Creating Shared Memories Through Play</h2>
 
-  <h2>Thrilling Wilderness Adventures</h2>
-  <ul>
-    <li>Hiking through forests</li>
-    <li>Splashing in streams</li>
-    <li>Stargazing</li>
-    <li>Spotting wildlife</li>
-  </ul>
+  <p>Playing together helps create a strong bond and beautiful memories for siblings. Whether it’s a game of tag, building a fort, or creating a dance routine, these playful activities become the building blocks of memories that siblings can fondly recall for years to come, strengthening their bond and creating a sense of unity within the family.</p>
 
-  <h2>A Unique Bonding Experience</h2>
-  <ul>
-    <li>Roasting marshmallows</li>
-    <li>Storytelling</li>
-    <li>Quiet moments together</li>
-    <li>Creating traditions</li>
-  </ul>
+  <p>Playtime fosters cooperation and communication, but it also provides an opportunity for siblings to have fun and simply enjoy each other’s company. Laughter and joy are essential aspects of any relationship, and engaging in playful activities can create a positive and happy atmosphere that strengthens the sibling bond.</p>
 
-  <h2>Creating Lasting Memories</h2>
-  <ul>
-    <li>Packing gear</li>
-    <li>Exploring campgrounds</li>
-    <li>Adventure trips</li>
-    <li>Documenting memories</li>
-  </ul>
+  <h2>The Unique and Special Bond of Siblings</h2>
+
+  <p>Family connections are critical, and siblings play a crucial role in building and maintaining these connections. By engaging in playful activities together, siblings can strengthen their bond, create lasting memories, and build a sense of unity within the family.</p>
+
+  <p>Siblings often become each other’s first friends and confidants. Their bond is strengthened through shared experiences and mutual understanding. The sibling relationship is foundational for developing social skills and emotional intelligence.</p>
+
+  <h2>The Lasting Benefits of Play</h2>
+
+  <p>So, next time you’re looking for ways to strengthen the bond between your siblings, consider the power of play. Whether it’s a game of catch, a puzzle, or a dance party in the living room, engaging in playful activities can help foster a solid and lasting bond that will benefit your siblings for years.</p>
 
   </body>
   </html>
