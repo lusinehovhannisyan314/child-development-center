@@ -9,6 +9,7 @@
 html {scroll-behavior:smooth;}
 body {margin:0;font-family:'Segoe UI';background:#F9F7F3;color:#333;}
 
+/* HEADER */
 header {
   background:#A8D5BA;
   color:white;
@@ -24,6 +25,15 @@ nav a {
   text-decoration:none;
 }
 
+.lang-btn {
+  margin-left:10px;
+  padding:6px 10px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* HERO */
 .hero {
   padding:80px 20px;
   text-align:center;
@@ -38,11 +48,13 @@ nav a {
   border-radius:10px;
 }
 
+/* SECTIONS */
 .section {
   padding:60px 20px;
   text-align:center;
 }
 
+/* CARDS */
 .services {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -58,6 +70,33 @@ nav a {
   box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
 
+/* FORM */
+.form-box {
+  max-width:600px;
+  margin:auto;
+  background:white;
+  padding:25px;
+  border-radius:15px;
+}
+
+input, textarea {
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:8px;
+  border:1px solid #ddd;
+}
+
+.btn {
+  background:#A8D5BA;
+  color:white;
+  padding:12px 20px;
+  border:none;
+  border-radius:25px;
+  cursor:pointer;
+}
+
+/* FOOTER */
 footer {
   background:#A8D5BA;
   color:white;
@@ -77,16 +116,18 @@ footer {
     <a href="programs.html">Programs</a>
     <a href="#" onclick="openAdvice()">Advice</a>
     <a href="#booking">Book</a>
+    <button onclick="toggleLang()" class="lang-btn">🇦🇲 / EN</button>
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <h2>Helping Children Grow with Confidence</h2>
 </section>
 
+<!-- SPECIALISTS -->
 <section class="section">
   <h2>Our Specialists</h2>
-
   <div class="services">
     <div class="card">Speech Therapist</div>
     <div class="card">Social Worker</div>
@@ -94,6 +135,44 @@ footer {
     <div class="card">Physical Education Specialist</div>
     <div class="card">Art Therapy Specialist</div>
   </div>
+</section>
+
+<!-- METHODS -->
+<section class="section">
+  <h2>Working Methods</h2>
+  <div class="services">
+    <div class="card">Individual Sessions</div>
+    <div class="card">Group Sessions</div>
+  </div>
+</section>
+
+<!-- HOURS -->
+<section class="section">
+  <h2>Working Hours</h2>
+  <p>Monday – Friday: 09:00 – 18:00</p>
+</section>
+
+<!-- BOOKING -->
+<section class="section" id="booking">
+  <h2>Book Appointment</h2>
+
+  <div class="form-box">
+    <form action="https://formspree.io/f/YOUR_ID" method="POST">
+      <input type="text" name="name" placeholder="Parent Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Phone" required>
+      <input type="date" name="date" required>
+      <textarea name="message" placeholder="Child details"></textarea>
+      <button class="btn" type="submit">Send Request</button>
+    </form>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="section">
+  <h2>Our Location</h2>
+  <iframe src="https://maps.google.com/maps?q=Vedi%20Armenia&z=13&output=embed"
+  style="width:100%;height:300px;border:none;border-radius:15px;"></iframe>
 </section>
 
 <footer>
@@ -117,7 +196,8 @@ body{
   color:#2c2c2c;
   line-height:1.7;
 }
-h1{color:#A8D5BA;}
+h1, h2{color:#A8D5BA;}
+ul{margin-bottom:20px;}
 </style>
 </head>
 
@@ -125,39 +205,63 @@ h1{color:#A8D5BA;}
 
 <h1>The Power of Play in Strengthening Bonds</h1>
 
-<p>
-Playtime is not just a fun activity for children but also a powerful tool for building strong sibling bonds. When siblings play together, they learn essential skills such as cooperation, communication, and problem-solving. When practiced during play, these skills can translate into their everyday interactions and help them build a solid and lasting relationship.
-</p>
+<p>Playtime is not just a fun activity for children but also a powerful tool for building strong sibling bonds...</p>
 
-<p>
-Playtime allows siblings to interact in a relaxed and enjoyable setting. Through play, they practice cooperation by working towards a common goal. Communication skills are enhanced as they negotiate roles and rules. Problem-solving abilities are developed when they face challenges together.
-</p>
+<p>Playtime allows siblings to interact in a relaxed setting...</p>
 
 <h2>Creating Shared Memories Through Play</h2>
 
-<p>
-Playing together helps create a strong bond and beautiful memories for siblings. Whether it’s a game of tag, building a fort, or creating a dance routine, these playful activities become the building blocks of memories that siblings can fondly recall for years to come, strengthening their bond and creating a sense of unity within the family.
-</p>
+<p>Playing together helps create a strong bond and beautiful memories...</p>
 
-<p>
-Playtime fosters cooperation and communication, but it also provides an opportunity for siblings to have fun and simply enjoy each other’s company. Laughter and joy are essential aspects of any relationship, and engaging in playful activities can create a positive and happy atmosphere that strengthens the sibling bond.
-</p>
+<p>Playtime fosters cooperation and communication...</p>
 
 <h2>The Unique and Special Bond of Siblings</h2>
 
-<p>
-Family connections are critical, and siblings play a crucial role in building and maintaining these connections. By engaging in playful activities together, siblings can strengthen their bond, create lasting memories, and build a sense of unity within the family.
-</p>
+<p>Family connections are critical...</p>
 
-<p>
-Siblings often become each other’s first friends and confidants. Their bond is strengthened through shared experiences and mutual understanding. The sibling relationship is foundational for developing social skills and emotional intelligence.
-</p>
+<p>Siblings often become each other’s first friends...</p>
 
 <h2>The Lasting Benefits of Play</h2>
 
-<p>
-So, next time you’re looking for ways to strengthen the bond between your siblings, consider the power of play. Whether it’s a game of catch, a puzzle, or a dance party in the living room, engaging in playful activities can help foster a solid and lasting bond that will benefit your siblings for years.
-</p>
+<p>So, next time you’re looking for ways to strengthen the bond...</p>
+
+<hr>
+
+<h1>Exploring the Great Outdoors: Camping with Kids</h1>
+
+<p>As the weather warms up and the days grow longer...</p>
+
+<h2>Introducing Kids to Outdoor Adventure</h2>
+
+<ul>
+<li>Setting up a Tent...</li>
+<li>Building a Campfire...</li>
+<li>Navigating Hiking Trails...</li>
+</ul>
+
+<h2>Thrilling Wilderness Adventures</h2>
+<ul>
+<li>Hiking through forests</li>
+<li>Splashing in streams</li>
+<li>Stargazing</li>
+<li>Spotting wildlife</li>
+</ul>
+
+<h2>A Unique Bonding Experience</h2>
+<ul>
+<li>Roasting marshmallows</li>
+<li>Storytelling</li>
+<li>Quiet moments</li>
+<li>Creating traditions</li>
+</ul>
+
+<h2>Creating Lasting Memories</h2>
+<ul>
+<li>Packing gear</li>
+<li>Exploring campgrounds</li>
+<li>Venturing into wilderness areas</li>
+<li>Documenting the trip</li>
+</ul>
 
 </body>
 </html>
