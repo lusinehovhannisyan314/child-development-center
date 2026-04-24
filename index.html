@@ -75,10 +75,7 @@ footer {
   <nav>
     <a href="index.html">Home</a>
     <a href="programs.html">Programs</a>
-
-    <!-- Advice opens in new tab -->
     <a href="#" onclick="openAdvice()">Advice</a>
-
     <a href="#booking">Book</a>
   </nav>
 </header>
@@ -105,50 +102,65 @@ footer {
 
 <script>
 function openAdvice() {
-  const newWindow = window.open("", "_blank");
+  const w = window.open("", "_blank");
 
-  newWindow.document.write(`
-  <html>
-  <head>
-    <title>Advice for Parents</title>
-    <style>
-      body {
-        font-family: Arial;
-        padding: 40px;
-        background:#F4FBF7;
-        color:#2c2c2c;
-        line-height:1.7;
-      }
-      h1 {color:#A8D5BA;}
-    </style>
-  </head>
+  w.document.write(`
+<!DOCTYPE html>
+<html>
+<head>
+<title>Advice</title>
+<style>
+body{
+  font-family: Arial;
+  padding:40px;
+  background:#F4FBF7;
+  color:#2c2c2c;
+  line-height:1.7;
+}
+h1{color:#A8D5BA;}
+</style>
+</head>
 
-  <body>
+<body>
 
-  <h1>The Power of Play in Strengthening Bonds</h1>
+<h1>The Power of Play in Strengthening Bonds</h1>
 
-  <p>Playtime is not just a fun activity for children but also a powerful tool for building strong sibling bonds. When siblings play together, they learn essential skills such as cooperation, communication, and problem-solving. When practiced during play, these skills can translate into their everyday interactions and help them build a solid and lasting relationship.</p>
+<p>
+Playtime is not just a fun activity for children but also a powerful tool for building strong sibling bonds. When siblings play together, they learn essential skills such as cooperation, communication, and problem-solving. When practiced during play, these skills can translate into their everyday interactions and help them build a solid and lasting relationship.
+</p>
 
-  <p>Playtime allows siblings to interact in a relaxed and enjoyable setting. Through play, they practice cooperation by working towards a common goal. Communication skills are enhanced as they negotiate roles and rules. Problem-solving abilities are developed when they face challenges together.</p>
+<p>
+Playtime allows siblings to interact in a relaxed and enjoyable setting. Through play, they practice cooperation by working towards a common goal. Communication skills are enhanced as they negotiate roles and rules. Problem-solving abilities are developed when they face challenges together.
+</p>
 
-  <h2>Creating Shared Memories Through Play</h2>
+<h2>Creating Shared Memories Through Play</h2>
 
-  <p>Playing together helps create a strong bond and beautiful memories for siblings. Whether it’s a game of tag, building a fort, or creating a dance routine, these playful activities become the building blocks of memories that siblings can fondly recall for years to come, strengthening their bond and creating a sense of unity within the family.</p>
+<p>
+Playing together helps create a strong bond and beautiful memories for siblings. Whether it’s a game of tag, building a fort, or creating a dance routine, these playful activities become the building blocks of memories that siblings can fondly recall for years to come, strengthening their bond and creating a sense of unity within the family.
+</p>
 
-  <p>Playtime fosters cooperation and communication, but it also provides an opportunity for siblings to have fun and simply enjoy each other’s company. Laughter and joy are essential aspects of any relationship, and engaging in playful activities can create a positive and happy atmosphere that strengthens the sibling bond.</p>
+<p>
+Playtime fosters cooperation and communication, but it also provides an opportunity for siblings to have fun and simply enjoy each other’s company. Laughter and joy are essential aspects of any relationship, and engaging in playful activities can create a positive and happy atmosphere that strengthens the sibling bond.
+</p>
 
-  <h2>The Unique and Special Bond of Siblings</h2>
+<h2>The Unique and Special Bond of Siblings</h2>
 
-  <p>Family connections are critical, and siblings play a crucial role in building and maintaining these connections. By engaging in playful activities together, siblings can strengthen their bond, create lasting memories, and build a sense of unity within the family.</p>
+<p>
+Family connections are critical, and siblings play a crucial role in building and maintaining these connections. By engaging in playful activities together, siblings can strengthen their bond, create lasting memories, and build a sense of unity within the family.
+</p>
 
-  <p>Siblings often become each other’s first friends and confidants. Their bond is strengthened through shared experiences and mutual understanding. The sibling relationship is foundational for developing social skills and emotional intelligence.</p>
+<p>
+Siblings often become each other’s first friends and confidants. Their bond is strengthened through shared experiences and mutual understanding. The sibling relationship is foundational for developing social skills and emotional intelligence.
+</p>
 
-  <h2>The Lasting Benefits of Play</h2>
+<h2>The Lasting Benefits of Play</h2>
 
-  <p>So, next time you’re looking for ways to strengthen the bond between your siblings, consider the power of play. Whether it’s a game of catch, a puzzle, or a dance party in the living room, engaging in playful activities can help foster a solid and lasting bond that will benefit your siblings for years.</p>
+<p>
+So, next time you’re looking for ways to strengthen the bond between your siblings, consider the power of play. Whether it’s a game of catch, a puzzle, or a dance party in the living room, engaging in playful activities can help foster a solid and lasting bond that will benefit your siblings for years.
+</p>
 
-  </body>
-  </html>
+</body>
+</html>
   `);
 }
 </script>
