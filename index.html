@@ -51,22 +51,59 @@ nav a {
   text-align:center;
 }
 
+/* 🔥 SPECIALISTS IMPROVED */
 .services {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
+  gap:25px;
   max-width:1000px;
   margin:auto;
 }
 
 .card {
-  background:white;
-  padding:20px;
-  border-radius:15px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+  background:linear-gradient(135deg,#ffffff,#F0FFF7);
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  transition:0.3s;
+  font-weight:600;
 }
 
-/* ABOUT DESIGN */
+.card:hover {
+  transform:translateY(-8px);
+  background:#E6FFF2;
+}
+
+/* 🎬 SLIDER */
+.slider {
+  max-width:900px;
+  margin:40px auto;
+  overflow:hidden;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.slides {
+  display:flex;
+  width:400%;
+  animation:slide 16s infinite;
+}
+
+.slides img {
+  width:100%;
+  height:400px;
+  object-fit:cover;
+}
+
+@keyframes slide {
+  0% {transform:translateX(0);}
+  25% {transform:translateX(-100%);}
+  50% {transform:translateX(-200%);}
+  75% {transform:translateX(-300%);}
+  100% {transform:translateX(0);}
+}
+
+/* ABOUT */
 .about-container {
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -76,15 +113,9 @@ nav a {
   margin:auto;
 }
 
-.about-text {
-  text-align:left;
-  line-height:1.7;
-}
+.about-text {text-align:left;line-height:1.7;}
 
-.about-img {
-  display:flex;
-  justify-content:center;
-}
+.about-img {display:flex;justify-content:center;}
 
 .about-img img {
   width:75%;
@@ -94,10 +125,7 @@ nav a {
 }
 
 @media (max-width:768px){
-  .about-container {
-    grid-template-columns:1fr;
-    text-align:center;
-  }
+  .about-container {grid-template-columns:1fr;}
   .about-text {text-align:center;}
 }
 
@@ -145,7 +173,7 @@ footer {
 
   <nav>
     <a href="index.html"><span class="en">Home</span><span class="am" style="display:none;">Գլխավոր</span></a>
-    <a href="programs.html"><span class="en">Programs</span><span class="am" style="display:none;">Ծրագրեր</span></a>
+    <a href="#"><span class="en">Programs</span><span class="am" style="display:none;">Ծրագրեր</span></a>
     <a href="#" onclick="openAdvice()"><span class="en">Advice</span><span class="am" style="display:none;">Խորհուրդներ</span></a>
     <a href="#booking"><span class="en">Book</span><span class="am" style="display:none;">Ամրագրում</span></a>
     <button onclick="toggleLang()" class="lang-btn">🇦🇲 / EN</button>
@@ -172,6 +200,16 @@ footer {
   </div>
 </section>
 
+<!-- 🎬 SLIDER SECTION -->
+<div class="slider">
+  <div class="slides">
+    <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/woman-teaching-kids-about-planets.jpg?v=1777238558">
+    <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/children-learning-globe-with-woman-bedroom.jpg?v=1777238419">
+    <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/little-boy-playing.jpg?v=1777238478">
+    <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/tanaphong-toochinda-GagC07wVvck-unsplash.jpg?v=1777238507">
+  </div>
+</div>
+
 <!-- METHODS -->
 <section class="section">
   <h2 class="en">Working Methods</h2>
@@ -189,99 +227,61 @@ footer {
   <h2 class="am" style="display:none;">Մեր մասին</h2>
 
   <div class="about-container">
-
     <div class="about-text">
-
-      <p class="en">
-        Bright Steps Child Development Center was founded in 2022 with a clear mission — to support every child’s unique developmental journey in a safe, caring, and professional environment. Our center was created with the belief that every child deserves individual attention, understanding, and the opportunity to grow with confidence.
-      </p>
-
-      <p class="en">
-        Our main goal is to provide high-quality developmental support through a multidisciplinary approach. We work closely with families, combining professional expertise with empathy and respect. With the support of our local community and municipality, we have been able to build a welcoming space where children feel secure and parents feel supported.
-      </p>
-
-      <p class="en">
-        Our approach is based on collaboration, play-based learning, and personalized care. We believe that strong communication between specialists and parents creates the best results, helping children develop socially, emotionally, and physically.
-      </p>
-
-      <p class="am" style="display:none;">
-        «Բրայթ Սթեփս» երեխայի զարգացման կենտրոնը հիմնադրվել է 2022 թվականին՝ նպատակ ունենալով աջակցել յուրաքանչյուր երեխայի անհատական զարգացմանը անվտանգ, հոգատար և մասնագիտական միջավայրում։
-      </p>
-
-      <p class="am" style="display:none;">
-        Մեր հիմնական նպատակը բազմամասնագիտական մոտեցմամբ բարձրորակ աջակցություն տրամադրելն է։
-      </p>
-
-      <p class="am" style="display:none;">
-        Մեր մոտեցումը հիմնված է համագործակցության և անհատական զարգացման վրա։
-      </p>
-
+      <p>Bright Steps Child Development Center was founded in 2022...</p>
+      <p>Our main goal is to provide high-quality developmental support...</p>
+      <p>Our approach is based on collaboration and play-based learning...</p>
     </div>
 
     <div class="about-img">
       <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/baby-girl-with-mother.jpg?v=1777238118">
     </div>
-
   </div>
 </section>
 
 <!-- HOURS -->
 <section class="section">
-  <h2 class="en">Working Hours</h2>
-  <h2 class="am" style="display:none;">Աշխատանքային ժամեր</h2>
-
-  <p class="en">Monday – Friday: 09:00 – 18:00</p>
-  <p class="am" style="display:none;">Երկուշաբթի – Ուրբաթ՝ 09:00 – 18:00</p>
+  <h2>Working Hours</h2>
+  <p>Monday – Friday: 09:00 – 18:00</p>
 </section>
 
 <!-- BOOKING -->
 <section class="section" id="booking">
-  <h2>
-    <span class="en">Book Appointment</span>
-    <span class="am" style="display:none;">Ամրագրել հանդիպում</span>
-  </h2>
+  <h2>Book Appointment</h2>
 
   <div class="form-box">
-    <form action="https://formspree.io/f/YOUR_ID" method="POST">
-      <input type="text" name="name" placeholder="Parent Name / Ծնողի անուն" required>
-      <input type="email" name="email" placeholder="Email / Էլ. հասցե" required>
-      <input type="tel" name="phone" placeholder="Phone / Հեռախոս" required>
-      <input type="date" name="date" required>
-      <textarea name="message" placeholder="Child details / Երեխայի մասին տեղեկություն"></textarea>
-      <button class="btn" type="submit">Send Request</button>
+    <form action="#">
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="Email">
+      <textarea placeholder="Message"></textarea>
+      <button class="btn">Send</button>
     </form>
   </div>
 </section>
 
 <!-- MAP -->
 <section class="section">
-  <h2>
-    <span class="en">Our Location</span>
-    <span class="am" style="display:none;">Մեր գտնվելու վայրը</span>
-  </h2>
-
+  <h2>Our Location</h2>
   <iframe src="https://maps.google.com/maps?q=Vedi%20Armenia&z=13&output=embed"
   style="width:100%;height:300px;border:none;border-radius:15px;"></iframe>
 </section>
 
 <footer>
-  <p class="en">© 2026 Bright Steps Child Development Center</p>
-  <p class="am" style="display:none;">© 2026 «Բրայթ Սթեփս» երեխայի զարգացման կենտրոն</p>
+  <p>© 2026 Bright Steps</p>
 </footer>
 
 <script>
 function toggleLang() {
   document.querySelectorAll('.en').forEach(e=>{
-    e.style.display = e.style.display === 'none' ? 'inline' : 'none';
+    e.style.display = e.style.display==='none' ? 'inline' : 'none';
   });
   document.querySelectorAll('.am').forEach(e=>{
-    e.style.display = e.style.display === 'none' ? 'inline' : 'none';
+    e.style.display = e.style.display==='none' ? 'inline' : 'none';
   });
 }
 
-function openAdvice() {
-  const w = window.open("", "_blank");
-  w.document.write("<h1>Advice Page</h1>");
+function openAdvice(){
+  window.open("","_blank").document.write("<h1>Advice Page</h1>");
 }
 </script>
 
