@@ -6,8 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+
+body {
+  margin:0;
+  font-family:'Segoe UI';
+  color:#333;
+  background-color:#F9F7F3;
+  background-image: radial-gradient(#F2D7A1 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
 html {scroll-behavior:smooth;}
-body {margin:0;font-family:'Segoe UI';background:#F9F7F3;color:#333;}
 
 header {
   background:#A8D5BA;
@@ -26,10 +35,11 @@ nav a {
 
 .lang-btn {
   margin-left:10px;
-  padding:6px 10px;
+  padding:6px 12px;
   border:none;
   border-radius:8px;
   cursor:pointer;
+  font-weight:bold;
 }
 
 .hero {
@@ -51,7 +61,7 @@ nav a {
   text-align:center;
 }
 
-/* 🔥 SPECIALISTS IMPROVED */
+/* SPECIALISTS */
 .services {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -65,28 +75,27 @@ nav a {
   padding:25px;
   border-radius:18px;
   box-shadow:0 8px 20px rgba(0,0,0,0.08);
-  transition:0.3s;
-  font-weight:600;
 }
 
-.card:hover {
-  transform:translateY(-8px);
-  background:#E6FFF2;
+/* highlight center card */
+.card.highlight {
+  transform:scale(1.05);
+  background:#DFFFEF;
+  border:2px solid #A8D5BA;
 }
 
-/* 🎬 SLIDER */
+/* SLIDER */
 .slider {
   max-width:900px;
   margin:40px auto;
   overflow:hidden;
   border-radius:20px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 .slides {
   display:flex;
   width:400%;
-  animation:slide 16s infinite;
+  animation:slide 24s infinite;
 }
 
 .slides img {
@@ -113,9 +122,15 @@ nav a {
   margin:auto;
 }
 
-.about-text {text-align:left;line-height:1.7;}
+.about-text {
+  text-align:left;
+  line-height:1.7;
+}
 
-.about-img {display:flex;justify-content:center;}
+.about-img {
+  display:flex;
+  justify-content:center;
+}
 
 .about-img img {
   width:75%;
@@ -129,6 +144,7 @@ nav a {
   .about-text {text-align:center;}
 }
 
+/* FORM */
 .form-box {
   max-width:600px;
   margin:auto;
@@ -154,53 +170,50 @@ input, textarea {
   cursor:pointer;
 }
 
+/* FOOTER */
 footer {
   background:#A8D5BA;
   color:white;
   text-align:center;
   padding:20px;
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
-  <div style="font-size:22px;font-weight:bold;">
-    <span class="en">Bright Steps Child Development Center</span>
-    <span class="am" style="display:none;">«Բրայթ Սթեփս» երեխայի զարգացման կենտրոն</span>
-  </div>
+  <div style="font-size:22px;font-weight:bold;">Bright Steps Child Development Center</div>
 
   <nav>
-    <a href="index.html"><span class="en">Home</span><span class="am" style="display:none;">Գլխավոր</span></a>
-    <a href="#"><span class="en">Programs</span><span class="am" style="display:none;">Ծրագրեր</span></a>
-    <a href="#" onclick="openAdvice()"><span class="en">Advice</span><span class="am" style="display:none;">Խորհուրդներ</span></a>
-    <a href="#booking"><span class="en">Book</span><span class="am" style="display:none;">Ամրագրում</span></a>
-    <button onclick="toggleLang()" class="lang-btn">🇦🇲 / EN</button>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#" onclick="openAdvice()">Advice</a>
+    <a href="#booking">Book</a>
+    <button onclick="toggleLang()" class="lang-btn">ARM / ENG</button>
   </nav>
 </header>
 
 <!-- HERO -->
-<section class="hero">
-  <h2 class="en">Helping Children Grow with Confidence</h2>
-  <h2 class="am" style="display:none;">Օգնում ենք երեխաներին զարգանալ վստահությամբ</h2>
+<section class="hero" id="home">
+  <h2>Helping Children Grow with Confidence</h2>
 </section>
 
 <!-- SPECIALISTS -->
 <section class="section">
-  <h2 class="en">Our Specialists</h2>
-  <h2 class="am" style="display:none;">Մեր մասնագետները</h2>
+  <h2>Our Specialists</h2>
 
   <div class="services">
     <div class="card">Speech Therapist</div>
     <div class="card">Social Worker</div>
+    <div class="card highlight">Art Therapy Specialist</div>
     <div class="card">Social Pedagog</div>
     <div class="card">Physical Education Specialist</div>
-    <div class="card">Art Therapy Specialist</div>
   </div>
 </section>
 
-<!-- 🎬 SLIDER SECTION -->
+<!-- SLIDER -->
 <div class="slider">
   <div class="slides">
     <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/woman-teaching-kids-about-planets.jpg?v=1777238558">
@@ -212,8 +225,7 @@ footer {
 
 <!-- METHODS -->
 <section class="section">
-  <h2 class="en">Working Methods</h2>
-  <h2 class="am" style="display:none;">Աշխատանքի ձևաչափեր</h2>
+  <h2>Working Methods</h2>
 
   <div class="services">
     <div class="card">Individual Sessions</div>
@@ -221,21 +233,32 @@ footer {
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="section">
-  <h2 class="en">About Us</h2>
-  <h2 class="am" style="display:none;">Մեր մասին</h2>
+<!-- ABOUT (FULL TEXT RESTORED) -->
+<section class="section" id="about">
+  <h2>About Us</h2>
 
   <div class="about-container">
+
     <div class="about-text">
-      <p>Bright Steps Child Development Center was founded in 2022...</p>
-      <p>Our main goal is to provide high-quality developmental support...</p>
-      <p>Our approach is based on collaboration and play-based learning...</p>
+
+      <p>
+        Bright Steps Child Development Center was founded in 2022 with a clear mission — to support every child’s unique developmental journey in a safe, caring, and professional environment. Our center was created with the belief that every child deserves individual attention, understanding, and the opportunity to grow with confidence.
+      </p>
+
+      <p>
+        Our main goal is to provide high-quality developmental support through a multidisciplinary approach. We work closely with families, combining professional expertise with empathy and respect. With the support of our local community and municipality, we have been able to build a welcoming space where children feel secure and parents feel supported.
+      </p>
+
+      <p>
+        Our approach is based on collaboration, play-based learning, and personalized care. We believe that strong communication between specialists and parents creates the best results, helping children develop socially, emotionally, and physically.
+      </p>
+
     </div>
 
     <div class="about-img">
       <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/baby-girl-with-mother.jpg?v=1777238118">
     </div>
+
   </div>
 </section>
 
@@ -250,18 +273,17 @@ footer {
   <h2>Book Appointment</h2>
 
   <div class="form-box">
-    <form action="#">
-      <input type="text" placeholder="Name">
-      <input type="email" placeholder="Email">
-      <textarea placeholder="Message"></textarea>
-      <button class="btn">Send</button>
-    </form>
+    <input type="text" placeholder="Name">
+    <input type="email" placeholder="Email">
+    <textarea placeholder="Message"></textarea>
+    <button class="btn">Send</button>
   </div>
 </section>
 
 <!-- MAP -->
 <section class="section">
   <h2>Our Location</h2>
+
   <iframe src="https://maps.google.com/maps?q=Vedi%20Armenia&z=13&output=embed"
   style="width:100%;height:300px;border:none;border-radius:15px;"></iframe>
 </section>
@@ -271,17 +293,12 @@ footer {
 </footer>
 
 <script>
-function toggleLang() {
-  document.querySelectorAll('.en').forEach(e=>{
-    e.style.display = e.style.display==='none' ? 'inline' : 'none';
-  });
-  document.querySelectorAll('.am').forEach(e=>{
-    e.style.display = e.style.display==='none' ? 'inline' : 'none';
-  });
+function toggleLang(){
+  alert("Language switch ready for next upgrade");
 }
 
 function openAdvice(){
-  window.open("","_blank").document.write("<h1>Advice Page</h1>");
+  window.open("advice.html","_blank");
 }
 </script>
 
