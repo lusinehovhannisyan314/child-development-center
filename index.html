@@ -66,6 +66,31 @@ nav a {
   box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
 
+/* ABOUT */
+.about-container {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:30px;
+  max-width:1000px;
+  margin:auto;
+}
+
+.about-text {
+  flex:1;
+  text-align:left;
+}
+
+.about-img {
+  flex:1;
+}
+
+.about-img img {
+  width:100%;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
 .form-box {
   max-width:600px;
   margin:auto;
@@ -110,19 +135,9 @@ footer {
 
   <nav>
     <a href="index.html"><span class="en">Home</span><span class="am" style="display:none;">Գլխավոր</span></a>
-
     <a href="programs.html"><span class="en">Programs</span><span class="am" style="display:none;">Ծրագրեր</span></a>
-
-    <a href="#" onclick="openAdvice()">
-      <span class="en">Advice</span>
-      <span class="am" style="display:none;">Խորհուրդներ</span>
-    </a>
-
-    <a href="#booking">
-      <span class="en">Book</span>
-      <span class="am" style="display:none;">Ամրագրում</span>
-    </a>
-
+    <a href="#" onclick="openAdvice()"><span class="en">Advice</span><span class="am" style="display:none;">Խորհուրդներ</span></a>
+    <a href="#booking"><span class="en">Book</span><span class="am" style="display:none;">Ամրագրում</span></a>
     <button onclick="toggleLang()" class="lang-btn">🇦🇲 / EN</button>
   </nav>
 </header>
@@ -139,30 +154,11 @@ footer {
   <h2 class="am" style="display:none;">Մեր մասնագետները</h2>
 
   <div class="services">
-    <div class="card">
-      <span class="en">Speech Therapist</span>
-      <span class="am" style="display:none;">Լոգոպեդ</span>
-    </div>
-
-    <div class="card">
-      <span class="en">Social Worker</span>
-      <span class="am" style="display:none;">Սոցիալական աշխատող</span>
-    </div>
-
-    <div class="card">
-      <span class="en">Social Pedagog</span>
-      <span class="am" style="display:none;">Սոցիալական մանկավարժ</span>
-    </div>
-
-    <div class="card">
-      <span class="en">Physical Education Specialist</span>
-      <span class="am" style="display:none;">Ֆիզիկական դաստիարակության մասնագետ</span>
-    </div>
-
-    <div class="card">
-      <span class="en">Art Therapy Specialist</span>
-      <span class="am" style="display:none;">Արտ թերապիայի մասնագետ</span>
-    </div>
+    <div class="card">Speech Therapist</div>
+    <div class="card">Social Worker</div>
+    <div class="card">Social Pedagog</div>
+    <div class="card">Physical Education Specialist</div>
+    <div class="card">Art Therapy Specialist</div>
   </div>
 </section>
 
@@ -172,15 +168,48 @@ footer {
   <h2 class="am" style="display:none;">Աշխատանքի ձևաչափեր</h2>
 
   <div class="services">
-    <div class="card">
-      <span class="en">Individual Sessions</span>
-      <span class="am" style="display:none;">Անհատական պարապմունքներ</span>
+    <div class="card">Individual Sessions</div>
+    <div class="card">Group Sessions</div>
+  </div>
+</section>
+
+<!-- ABOUT US -->
+<section class="section">
+  <h2 class="en">About Us</h2>
+  <h2 class="am" style="display:none;">Մեր մասին</h2>
+
+  <div class="about-container">
+
+    <div class="about-text">
+      <p class="en">
+        Bright Steps Child Development Center was founded in 2022 with a clear mission — to support every child’s unique developmental journey in a safe, caring, and professional environment. Our center was created with the belief that every child deserves individual attention, understanding, and the opportunity to grow with confidence.
+      </p>
+
+      <p class="en">
+        Our main goal is to provide high-quality developmental support through a multidisciplinary approach. We work closely with families, combining professional expertise with empathy and respect. With the support of our local community and municipality, we have been able to build a welcoming space where children feel secure and parents feel supported.
+      </p>
+
+      <p class="en">
+        Our approach is based on collaboration, play-based learning, and personalized care. We believe that strong communication between specialists and parents creates the best results, helping children develop socially, emotionally, and physically.
+      </p>
+
+      <p class="am" style="display:none;">
+        «Բրայթ Սթեփս» երեխայի զարգացման կենտրոնը հիմնադրվել է 2022 թվականին՝ նպատակ ունենալով աջակցել յուրաքանչյուր երեխայի անհատական զարգացմանը անվտանգ, հոգատար և մասնագիտական միջավայրում։ Մենք վստահ ենք, որ յուրաքանչյուր երեխա արժանի է ուշադրության, հասկանալու և վստահությամբ զարգանալու հնարավորության։
+      </p>
+
+      <p class="am" style="display:none;">
+        Մեր հիմնական նպատակը բազմամասնագիտական մոտեցմամբ բարձրորակ աջակցություն տրամադրելն է։ Մենք սերտ համագործակցում ենք ընտանիքների հետ՝ համադրելով մասնագիտական գիտելիքն ու հոգատար վերաբերմունքը։ Համայնքի և տեղական ինքնակառավարման մարմինների աջակցության շնորհիվ մենք ստեղծել ենք հարմարավետ միջավայր, որտեղ երեխաները զգում են իրենց ապահով, իսկ ծնողները՝ աջակցված։
+      </p>
+
+      <p class="am" style="display:none;">
+        Մեր աշխատանքային մոտեցումը հիմնված է համագործակցության, խաղի միջոցով ուսուցման և անհատական մոտեցման վրա։ Մենք վստահ ենք, որ մասնագետների և ծնողների արդյունավետ համագործակցությունը ապահովում է լավագույն արդյունքները՝ նպաստելով երեխայի սոցիալական, հուզական և ֆիզիկական զարգացմանը։
+      </p>
     </div>
 
-    <div class="card">
-      <span class="en">Group Sessions</span>
-      <span class="am" style="display:none;">Խմբային պարապմունքներ</span>
+    <div class="about-img">
+      <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/baby-girl-with-mother.jpg?v=1777238118">
     </div>
+
   </div>
 </section>
 
@@ -207,10 +236,7 @@ footer {
       <input type="tel" name="phone" placeholder="Phone / Հեռախոս" required>
       <input type="date" name="date" required>
       <textarea name="message" placeholder="Child details / Երեխայի մասին տեղեկություն"></textarea>
-      <button class="btn" type="submit">
-        <span class="en">Send Request</span>
-        <span class="am" style="display:none;">Ուղարկել</span>
-      </button>
+      <button class="btn" type="submit">Send Request</button>
     </form>
   </div>
 </section>
@@ -243,30 +269,7 @@ function toggleLang() {
 
 function openAdvice() {
   const w = window.open("", "_blank");
-
-  w.document.write(`
-<!DOCTYPE html>
-<html>
-<head>
-<title>Advice</title>
-<style>
-body{font-family:Arial;padding:40px;background:#F4FBF7;line-height:1.7;}
-h1,h2{color:#A8D5BA;}
-</style>
-</head>
-<body>
-
-<h1>The Power of Play in Strengthening Bonds</h1>
-
-<p>Playtime is not just a fun activity for children...</p>
-
-<h2>Exploring the Great Outdoors</h2>
-
-<p>Camping with kids helps families reconnect with nature...</p>
-
-</body>
-</html>
-  `);
+  w.document.write("<h1>Advice Page</h1>");
 }
 </script>
 
