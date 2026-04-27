@@ -27,14 +27,23 @@ header {
   top:0;
 }
 
+/* ✅ FIXED MENU HORIZONTAL */
+nav {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
 nav a {
-  margin:0 10px;
+  margin:0 12px;
   color:white;
   text-decoration:none;
+  font-weight:500;
 }
 
 .lang-btn {
-  margin-left:10px;
+  margin-left:15px;
   padding:6px 12px;
   border:none;
   border-radius:8px;
@@ -84,7 +93,7 @@ nav a {
   border:2px solid #A8D5BA;
 }
 
-/* SLIDER FIXED */
+/* SLIDER */
 .slider {
   max-width:900px;
   margin:40px auto;
@@ -104,7 +113,6 @@ nav a {
   object-fit:cover;
 }
 
-/* seamless loop */
 @keyframes scroll {
   0% {transform:translateX(0);}
   100% {transform:translateX(-50%);}
@@ -132,6 +140,7 @@ nav a {
 }
 
 @media (max-width:768px){
+  nav {flex-direction:row;}
   .about-container {grid-template-columns:1fr;}
   .about-text {text-align:center;}
 }
@@ -216,12 +225,11 @@ footer {
 <!-- SLIDER -->
 <div class="slider">
   <div class="slides">
-    <!-- original -->
     <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/woman-teaching-kids-about-planets.jpg?v=1777238558">
     <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/children-learning-globe-with-woman-bedroom.jpg?v=1777238419">
     <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/little-boy-playing.jpg?v=1777238478">
     <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/tanaphong-toochinda-GagC07wVvck-unsplash.jpg?v=1777238507">
-    <!-- duplicate -->
+
     <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/woman-teaching-kids-about-planets.jpg?v=1777238558">
     <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/children-learning-globe-with-woman-bedroom.jpg?v=1777238419">
     <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/little-boy-playing.jpg?v=1777238478">
@@ -240,7 +248,7 @@ footer {
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ✅ FULL ABOUT TEXT RESTORED -->
 <section class="section" id="about">
   <h2 class="en">About Us</h2>
   <h2 class="am">Մեր մասին</h2>
@@ -252,16 +260,16 @@ footer {
         Bright Steps Child Development Center was founded in 2022 with a clear mission — to support every child’s unique developmental journey in a safe, caring, and professional environment. Our center was created with the belief that every child deserves individual attention, understanding, and the opportunity to grow with confidence.
       </p>
 
-      <p class="am">
-        «Բրայթ Սթեփս» երեխայի զարգացման կենտրոնը հիմնադրվել է 2022 թվականին՝ նպատակ ունենալով ապահովել յուրաքանչյուր երեխայի զարգացումը անվտանգ և աջակցող միջավայրում։
+      <p class="en">
+        Our main goal is to provide high-quality developmental support through a multidisciplinary approach. We work closely with families, combining professional expertise with empathy and respect. With the support of our local community and municipality, we have been able to build a welcoming space where children feel secure and parents feel supported.
       </p>
 
       <p class="en">
-        Our main goal is to provide high-quality developmental support through a multidisciplinary approach. We work closely with families and community to ensure the best results for children.
+        Our approach is based on collaboration, play-based learning, and personalized care. We believe that strong communication between specialists and parents creates the best results, helping children develop socially, emotionally, and physically.
       </p>
 
       <p class="am">
-        Մեր նպատակն է ապահովել բարձրորակ աջակցություն բազմամասնագիտական մոտեցմամբ՝ համագործակցելով ընտանիքների և համայնքի հետ։
+        «Բրայթ Սթեփս» երեխայի զարգացման կենտրոնը հիմնադրվել է 2022 թվականին՝ նպատակ ունենալով աջակցել յուրաքանչյուր երեխայի զարգացմանը անվտանգ և հոգատար միջավայրում։
       </p>
 
     </div>
@@ -300,7 +308,6 @@ footer {
 </footer>
 
 <script>
-
 function toggleLang(){
   document.querySelectorAll('.en').forEach(e=>{
     e.style.display = (e.style.display === 'none') ? 'block' : 'none';
@@ -313,7 +320,6 @@ function toggleLang(){
 function openAdvice(){
   window.open("advice.html","_blank");
 }
-
 </script>
 
 </body>
