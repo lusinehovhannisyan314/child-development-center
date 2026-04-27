@@ -103,7 +103,7 @@ nav a {
 .slides {
   display:flex;
   width:200%;
-  animation:scroll 60s linear infinite;
+  animation:scroll 40s linear infinite;
 }
 
 .slides img {
@@ -139,6 +139,7 @@ nav a {
 }
 
 @media (max-width:768px){
+  nav {flex-direction:row;}
   .about-container {grid-template-columns:1fr;}
   .about-text {text-align:center;}
 }
@@ -176,48 +177,40 @@ footer {
   padding:20px;
 }
 
-/* LANGUAGE SYSTEM */
-.am { display:none; }
-body.arm .en { display:none; }
-body.arm .am { display:block; }
-
 </style>
 </head>
 
 <body>
 
 <header>
-  <div style="font-size:22px;font-weight:bold;">
-    <span class="en">Bright Steps Child Development Center</span>
-    <span class="am">«Բրայթ Սթեփս» երեխայի զարգացման կենտրոն</span>
+  <div style="font-size:22px;font-weight:bold;" id="title">
+    Bright Steps Child Development Center
   </div>
 
   <nav>
-    <a href="#home"><span class="en">Home</span><span class="am">Գլխավոր</span></a>
-    <a href="#about"><span class="en">About Us</span><span class="am">Մեր մասին</span></a>
-    <a href="#" onclick="openAdvice()"><span class="en">Advice</span><span class="am">Խորհուրդներ</span></a>
-    <a href="#booking"><span class="en">Book</span><span class="am">Ամրագրում</span></a>
+    <a href="#home" id="nav-home">Home</a>
+    <a href="#about" id="nav-about">About Us</a>
+    <a href="#" onclick="openAdvice()" id="nav-advice">Advice</a>
+    <a href="#booking" id="nav-book">Book</a>
     <button onclick="toggleLang()" class="lang-btn">ARM / ENG</button>
   </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <h2 class="en">Helping Children Grow with Confidence</h2>
-  <h2 class="am">Օգնում ենք երեխաներին զարգանալ վստահությամբ</h2>
+  <h2 id="hero-text">Helping Children Grow with Confidence</h2>
 </section>
 
 <!-- SPECIALISTS -->
 <section class="section">
-  <h2 class="en">Our Specialists</h2>
-  <h2 class="am">Մեր մասնագետները</h2>
+  <h2 id="spec-title">Our Specialists</h2>
 
   <div class="services">
-    <div class="card"><span class="en">Speech Therapist</span><span class="am">Խոսքի թերապևտ</span></div>
-    <div class="card"><span class="en">Social Worker</span><span class="am">Սոցիալական աշխատող</span></div>
-    <div class="card highlight"><span class="en">Art Therapy Specialist</span><span class="am">Արտ թերապիայի մասնագետ</span></div>
-    <div class="card"><span class="en">Social Pedagog</span><span class="am">Սոցիալական մանկավարժ</span></div>
-    <div class="card"><span class="en">Physical Education Specialist</span><span class="am">Ֆիզկուլտուրայի մասնագետ</span></div>
+    <div class="card" id="sp1">Speech Therapist</div>
+    <div class="card" id="sp2">Social Worker</div>
+    <div class="card highlight" id="sp3">Art Therapy Specialist</div>
+    <div class="card" id="sp4">Social Pedagog</div>
+    <div class="card" id="sp5">Physical Education Specialist</div>
   </div>
 </section>
 
@@ -236,38 +229,23 @@ body.arm .am { display:block; }
   </div>
 </div>
 
-<!-- ABOUT (FULL TEXT KEPT) -->
+<!-- METHODS -->
+<section class="section">
+  <h2 id="methods-title">Working Methods</h2>
+
+  <div class="services">
+    <div class="card" id="m1">Individual Sessions</div>
+    <div class="card" id="m2">Group Sessions</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
 <section class="section" id="about">
-  <h2 class="en">About Us</h2>
-  <h2 class="am">Մեր մասին</h2>
+  <h2 id="about-title">About Us</h2>
 
   <div class="about-container">
-    <div class="about-text">
-
-      <p class="en">
-        Bright Steps Child Development Center was founded in 2022 with a clear mission — to support every child’s unique developmental journey in a safe, caring, and professional environment. Our center was created with the belief that every child deserves individual attention, understanding, and the opportunity to grow with confidence.
-      </p>
-
-      <p class="en">
-        Our main goal is to provide high-quality developmental support through a multidisciplinary approach. We work closely with families, combining professional expertise with empathy and respect. With the support of our local community and municipality, we have been able to build a welcoming space where children feel secure and parents feel supported.
-      </p>
-
-      <p class="en">
-        Our approach is based on collaboration, play-based learning, and personalized care. We believe that strong communication between specialists and parents creates the best results, helping children develop socially, emotionally, and physically.
-      </p>
-
-      <p class="am">
-        «Բրայթ Սթեփս» երեխայի զարգացման կենտրոնը հիմնադրվել է 2022 թվականին՝ նպատակ ունենալով աջակցել յուրաքանչյուր երեխայի զարգացմանը անվտանգ, ջերմ և մասնագիտական միջավայրում։
-      </p>
-
-      <p class="am">
-        Մեր հիմնական նպատակն է ապահովել բարձրորակ զարգացման աջակցություն՝ բազմամասնագիտական մոտեցմամբ։ Մենք սերտ համագործակցում ենք ընտանիքների հետ՝ համադրելով մասնագիտական փորձն ու հոգատար վերաբերմունքը։
-      </p>
-
-      <p class="am">
-        Մեր մոտեցումը հիմնված է համագործակցության, խաղի միջոցով ուսուցման և անհատական աշխատանքի վրա՝ նպաստելով երեխաների սոցիալական, հուզական և ֆիզիկական զարգացմանը։
-      </p>
-
+    <div class="about-text" id="about-text">
+      Bright Steps Child Development Center was founded in 2022 with a clear mission — to support every child’s unique developmental journey in a safe, caring, and professional environment.
     </div>
 
     <div class="about-img">
@@ -278,35 +256,55 @@ body.arm .am { display:block; }
 
 <!-- BOOKING -->
 <section class="section" id="booking">
-  <h2 class="en">Book Appointment</h2>
-  <h2 class="am">Ամրագրել հանդիպում</h2>
+  <h2 id="book-title">Book Appointment</h2>
 
-  <div class="form-box">
-    <input type="text" placeholder="Name / Անուն">
-    <input type="email" placeholder="Email / Էլ. հասցե">
-    <textarea placeholder="Message / Հաղորդագրություն"></textarea>
-    <button class="btn">Send</button>
+<div class="form-box">
+    <form action="https://formspree.io/f/YOUR_ID" method="POST">
+      <input type="text" name="name" placeholder="Parent Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Phone" required>
+      <input type="date" name="date" required>
+      <textarea name="message" placeholder="Child details"></textarea>
+      <button class="btn" type="submit">Send Request</button>
+    </form>
   </div>
 </section>
 
 <!-- MAP -->
 <section class="section">
-  <h2 class="en">Our Location</h2>
-  <h2 class="am">Մեր գտնվելու վայրը</h2>
+  <h2 id="map-title">Our Location</h2>
 
   <iframe src="https://maps.google.com/maps?q=Vedi%20Armenia&z=13&output=embed"
   style="width:100%;height:300px;border:none;border-radius:15px;"></iframe>
 </section>
 
 <footer>
-  <p class="en">© 2026 Bright Steps</p>
-  <p class="am">© 2026 «Բրայթ Սթեփս»</p>
+  <p id="footer-text">© 2026 Bright Steps</p>
 </footer>
 
 <script>
 
+let isArm = false;
+
 function toggleLang(){
-  document.body.classList.toggle("arm");
+  isArm = !isArm;
+
+  if(isArm){
+    document.getElementById("title").innerText = "«Բրայթ Սթեփս» երեխայի զարգացման կենտրոն";
+    document.getElementById("nav-home").innerText = "Գլխավոր";
+    document.getElementById("nav-about").innerText = "Մեր մասին";
+    document.getElementById("nav-advice").innerText = "Խորհուրդներ";
+    document.getElementById("nav-book").innerText = "Ամրագրում";
+    document.getElementById("hero-text").innerText = "Օգնում ենք երեխաներին զարգանալ վստահությամբ";
+    document.getElementById("spec-title").innerText = "Մեր մասնագետները";
+    document.getElementById("methods-title").innerText = "Աշխատանքի ձևաչափեր";
+    document.getElementById("about-title").innerText = "Մեր մասին";
+    document.getElementById("book-title").innerText = "Ամրագրել հանդիպում";
+    document.getElementById("map-title").innerText = "Մեր գտնվելու վայրը";
+    document.getElementById("footer-text").innerText = "© 2026 «Բրայթ Սթեփս»";
+  } else {
+    location.reload(); // clean reset to English
+  }
 }
 
 function openAdvice(){
