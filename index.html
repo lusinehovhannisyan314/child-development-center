@@ -84,7 +84,7 @@ nav a {
   border:2px solid #A8D5BA;
 }
 
-/* ✅ PERFECT LOOP SLIDER */
+/* SLIDER FIXED */
 .slider {
   max-width:900px;
   margin:40px auto;
@@ -104,7 +104,7 @@ nav a {
   object-fit:cover;
 }
 
-/* duplicate images for seamless loop */
+/* seamless loop */
 @keyframes scroll {
   0% {transform:translateX(0);}
   100% {transform:translateX(-50%);}
@@ -213,16 +213,15 @@ footer {
   </div>
 </section>
 
-<!-- ✅ SLIDER FIXED -->
+<!-- SLIDER -->
 <div class="slider">
   <div class="slides">
-    <!-- original images -->
+    <!-- original -->
     <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/woman-teaching-kids-about-planets.jpg?v=1777238558">
     <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/children-learning-globe-with-woman-bedroom.jpg?v=1777238419">
     <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/little-boy-playing.jpg?v=1777238478">
     <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/tanaphong-toochinda-GagC07wVvck-unsplash.jpg?v=1777238507">
-
-    <!-- duplicated for smooth loop -->
+    <!-- duplicate -->
     <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/woman-teaching-kids-about-planets.jpg?v=1777238558">
     <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/children-learning-globe-with-woman-bedroom.jpg?v=1777238419">
     <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/little-boy-playing.jpg?v=1777238478">
@@ -241,9 +240,67 @@ footer {
   </div>
 </section>
 
-<!-- (rest of your page unchanged...) -->
+<!-- ABOUT -->
+<section class="section" id="about">
+  <h2 class="en">About Us</h2>
+  <h2 class="am">Մեր մասին</h2>
+
+  <div class="about-container">
+    <div class="about-text">
+
+      <p class="en">
+        Bright Steps Child Development Center was founded in 2022 with a clear mission — to support every child’s unique developmental journey in a safe, caring, and professional environment. Our center was created with the belief that every child deserves individual attention, understanding, and the opportunity to grow with confidence.
+      </p>
+
+      <p class="am">
+        «Բրայթ Սթեփս» երեխայի զարգացման կենտրոնը հիմնադրվել է 2022 թվականին՝ նպատակ ունենալով ապահովել յուրաքանչյուր երեխայի զարգացումը անվտանգ և աջակցող միջավայրում։
+      </p>
+
+      <p class="en">
+        Our main goal is to provide high-quality developmental support through a multidisciplinary approach. We work closely with families and community to ensure the best results for children.
+      </p>
+
+      <p class="am">
+        Մեր նպատակն է ապահովել բարձրորակ աջակցություն բազմամասնագիտական մոտեցմամբ՝ համագործակցելով ընտանիքների և համայնքի հետ։
+      </p>
+
+    </div>
+
+    <div class="about-img">
+      <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/baby-girl-with-mother.jpg?v=1777238118">
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="section" id="booking">
+  <h2 class="en">Book Appointment</h2>
+  <h2 class="am">Ամրագրել հանդիպում</h2>
+
+  <div class="form-box">
+    <input type="text" placeholder="Name / Անուն">
+    <input type="email" placeholder="Email / Էլ. հասցե">
+    <textarea placeholder="Message / Հաղորդագրություն"></textarea>
+    <button class="btn">Send</button>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="section">
+  <h2 class="en">Our Location</h2>
+  <h2 class="am">Մեր գտնվելու վայրը</h2>
+
+  <iframe src="https://maps.google.com/maps?q=Vedi%20Armenia&z=13&output=embed"
+  style="width:100%;height:300px;border:none;border-radius:15px;"></iframe>
+</section>
+
+<footer>
+  <p class="en">© 2026 Bright Steps</p>
+  <p class="am">© 2026 «Բրայթ Սթեփս»</p>
+</footer>
 
 <script>
+
 function toggleLang(){
   document.querySelectorAll('.en').forEach(e=>{
     e.style.display = (e.style.display === 'none') ? 'block' : 'none';
@@ -256,6 +313,7 @@ function toggleLang(){
 function openAdvice(){
   window.open("advice.html","_blank");
 }
+
 </script>
 
 </body>
