@@ -27,7 +27,6 @@ header {
   top:0;
 }
 
-/* ✅ FIXED MENU HORIZONTAL */
 nav {
   display:flex;
   justify-content:center;
@@ -104,7 +103,7 @@ nav a {
 .slides {
   display:flex;
   width:200%;
-  animation:scroll 40s linear infinite;
+  animation:scroll 60s linear infinite;
 }
 
 .slides img {
@@ -140,7 +139,6 @@ nav a {
 }
 
 @media (max-width:768px){
-  nav {flex-direction:row;}
   .about-container {grid-template-columns:1fr;}
   .about-text {text-align:center;}
 }
@@ -178,9 +176,10 @@ footer {
   padding:20px;
 }
 
-/* LANGUAGE */
-.en {display:block;}
-.am {display:none;}
+/* LANGUAGE SYSTEM */
+.am { display:none; }
+body.arm .en { display:none; }
+body.arm .am { display:block; }
 
 </style>
 </head>
@@ -237,18 +236,7 @@ footer {
   </div>
 </div>
 
-<!-- METHODS -->
-<section class="section">
-  <h2 class="en">Working Methods</h2>
-  <h2 class="am">Աշխատանքի ձևաչափեր</h2>
-
-  <div class="services">
-    <div class="card"><span class="en">Individual Sessions</span><span class="am">Անհատական պարապմունքներ</span></div>
-    <div class="card"><span class="en">Group Sessions</span><span class="am">Խմբային պարապմունքներ</span></div>
-  </div>
-</section>
-
-<!-- ✅ FULL ABOUT TEXT RESTORED -->
+<!-- ABOUT (FULL TEXT KEPT) -->
 <section class="section" id="about">
   <h2 class="en">About Us</h2>
   <h2 class="am">Մեր մասին</h2>
@@ -269,7 +257,15 @@ footer {
       </p>
 
       <p class="am">
-        «Բրայթ Սթեփս» երեխայի զարգացման կենտրոնը հիմնադրվել է 2022 թվականին՝ նպատակ ունենալով աջակցել յուրաքանչյուր երեխայի զարգացմանը անվտանգ և հոգատար միջավայրում։
+        «Բրայթ Սթեփս» երեխայի զարգացման կենտրոնը հիմնադրվել է 2022 թվականին՝ նպատակ ունենալով աջակցել յուրաքանչյուր երեխայի զարգացմանը անվտանգ, ջերմ և մասնագիտական միջավայրում։
+      </p>
+
+      <p class="am">
+        Մեր հիմնական նպատակն է ապահովել բարձրորակ զարգացման աջակցություն՝ բազմամասնագիտական մոտեցմամբ։ Մենք սերտ համագործակցում ենք ընտանիքների հետ՝ համադրելով մասնագիտական փորձն ու հոգատար վերաբերմունքը։
+      </p>
+
+      <p class="am">
+        Մեր մոտեցումը հիմնված է համագործակցության, խաղի միջոցով ուսուցման և անհատական աշխատանքի վրա՝ նպաստելով երեխաների սոցիալական, հուզական և ֆիզիկական զարգացմանը։
       </p>
 
     </div>
@@ -285,15 +281,11 @@ footer {
   <h2 class="en">Book Appointment</h2>
   <h2 class="am">Ամրագրել հանդիպում</h2>
 
-<div class="form-box">
-    <form action="https://formspree.io/f/YOUR_ID" method="POST">
-      <input type="text" name="name" placeholder="Parent Name / Ծնողի անուն" required>
-      <input type="email" name="email" placeholder="Email / Էլ. հասցե" required>
-      <input type="tel" name="phone" placeholder="Phone / Հեռախոս" required>
-      <input type="date" name="date" required>
-      <textarea name="message" placeholder="Child details / Երեխայի մասին տեղեկություն"></textarea>
-      <button class="btn" type="submit">Send Request</button>
-    </form>
+  <div class="form-box">
+    <input type="text" placeholder="Name / Անուն">
+    <input type="email" placeholder="Email / Էլ. հասցե">
+    <textarea placeholder="Message / Հաղորդագրություն"></textarea>
+    <button class="btn">Send</button>
   </div>
 </section>
 
@@ -312,18 +304,15 @@ footer {
 </footer>
 
 <script>
+
 function toggleLang(){
-  document.querySelectorAll('.en').forEach(e=>{
-    e.style.display = (e.style.display === 'none') ? 'block' : 'none';
-  });
-  document.querySelectorAll('.am').forEach(e=>{
-    e.style.display = (e.style.display === 'none') ? 'block' : 'none';
-  });
+  document.body.classList.toggle("arm");
 }
 
 function openAdvice(){
   window.open("advice.html","_blank");
 }
+
 </script>
 
 </body>
