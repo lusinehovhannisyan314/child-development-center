@@ -27,6 +27,7 @@ header {
   top:0;
 }
 
+/* MENU */
 nav {
   display:flex;
   justify-content:center;
@@ -138,12 +139,6 @@ nav a {
   border-radius:15px;
 }
 
-@media (max-width:768px){
-  nav {flex-direction:row;}
-  .about-container {grid-template-columns:1fr;}
-  .about-text {text-align:center;}
-}
-
 /* FORM */
 .form-box {
   max-width:600px;
@@ -183,34 +178,34 @@ footer {
 <body>
 
 <header>
-  <div style="font-size:22px;font-weight:bold;" id="title">
+  <div style="font-size:22px;font-weight:bold;">
     Bright Steps Child Development Center
   </div>
 
   <nav>
-    <a href="#home" id="nav-home">Home</a>
-    <a href="#about" id="nav-about">About Us</a>
-    <a href="#" onclick="openAdvice()" id="nav-advice">Advice</a>
-    <a href="#booking" id="nav-book">Book</a>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#" onclick="openAdvice()">Advice</a>
+    <a href="#booking">Book</a>
     <button onclick="toggleLang()" class="lang-btn">ARM / ENG</button>
   </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <h2 id="hero-text">Helping Children Grow with Confidence</h2>
+  <h2>Helping Children Grow with Confidence</h2>
 </section>
 
 <!-- SPECIALISTS -->
 <section class="section">
-  <h2 id="spec-title">Our Specialists</h2>
+  <h2>Our Specialists</h2>
 
   <div class="services">
-    <div class="card" id="sp1">Speech Therapist</div>
-    <div class="card" id="sp2">Social Worker</div>
-    <div class="card highlight" id="sp3">Art Therapy Specialist</div>
-    <div class="card" id="sp4">Social Pedagog</div>
-    <div class="card" id="sp5">Physical Education Specialist</div>
+    <div class="card">Speech Therapist</div>
+    <div class="card">Social Worker</div>
+    <div class="card highlight">Art Therapy Specialist</div>
+    <div class="card">Social Pedagog</div>
+    <div class="card">Physical Education Specialist</div>
   </div>
 </section>
 
@@ -231,21 +226,33 @@ footer {
 
 <!-- METHODS -->
 <section class="section">
-  <h2 id="methods-title">Working Methods</h2>
+  <h2>Working Methods</h2>
 
   <div class="services">
-    <div class="card" id="m1">Individual Sessions</div>
-    <div class="card" id="m2">Group Sessions</div>
+    <div class="card">Individual Sessions</div>
+    <div class="card">Group Sessions</div>
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ABOUT (FULL RESTORED TEXT) -->
 <section class="section" id="about">
-  <h2 id="about-title">About Us</h2>
+  <h2>About Us</h2>
 
   <div class="about-container">
-    <div class="about-text" id="about-text">
-      Bright Steps Child Development Center was founded in 2022 with a clear mission — to support every child’s unique developmental journey in a safe, caring, and professional environment.
+    <div class="about-text">
+
+      <p>
+        Bright Steps Child Development Center was founded in 2022 with a clear mission — to support every child’s unique developmental journey in a safe, caring, and professional environment. Our center was created with the belief that every child deserves individual attention, understanding, and the opportunity to grow with confidence.
+      </p>
+
+      <p>
+        Our main goal is to provide high-quality developmental support through a multidisciplinary approach. We work closely with families, combining professional expertise with empathy and respect. With the support of our local community and municipality, we have been able to build a welcoming space where children feel secure and parents feel supported.
+      </p>
+
+      <p>
+        Our approach is based on collaboration, play-based learning, and personalized care. We believe that strong communication between specialists and parents creates the best results, helping children develop socially, emotionally, and physically.
+      </p>
+
     </div>
 
     <div class="about-img">
@@ -256,9 +263,9 @@ footer {
 
 <!-- BOOKING -->
 <section class="section" id="booking">
-  <h2 id="book-title">Book Appointment</h2>
+  <h2>Book Appointment</h2>
 
-<div class="form-box">
+  <div class="form-box">
     <form action="https://formspree.io/f/YOUR_ID" method="POST">
       <input type="text" name="name" placeholder="Parent Name" required>
       <input type="email" name="email" placeholder="Email" required>
@@ -272,39 +279,24 @@ footer {
 
 <!-- MAP -->
 <section class="section">
-  <h2 id="map-title">Our Location</h2>
+  <h2>Our Location</h2>
 
   <iframe src="https://maps.google.com/maps?q=Vedi%20Armenia&z=13&output=embed"
   style="width:100%;height:300px;border:none;border-radius:15px;"></iframe>
 </section>
 
 <footer>
-  <p id="footer-text">© 2026 Bright Steps</p>
+  <p>© 2026 Bright Steps</p>
 </footer>
 
 <script>
 
-let isArm = false;
-
 function toggleLang(){
-  isArm = !isArm;
+  const en = document.querySelectorAll('.en');
+  const am = document.querySelectorAll('.am');
 
-  if(isArm){
-    document.getElementById("title").innerText = "«Բրայթ Սթեփս» երեխայի զարգացման կենտրոն";
-    document.getElementById("nav-home").innerText = "Գլխավոր";
-    document.getElementById("nav-about").innerText = "Մեր մասին";
-    document.getElementById("nav-advice").innerText = "Խորհուրդներ";
-    document.getElementById("nav-book").innerText = "Ամրագրում";
-    document.getElementById("hero-text").innerText = "Օգնում ենք երեխաներին զարգանալ վստահությամբ";
-    document.getElementById("spec-title").innerText = "Մեր մասնագետները";
-    document.getElementById("methods-title").innerText = "Աշխատանքի ձևաչափեր";
-    document.getElementById("about-title").innerText = "Մեր մասին";
-    document.getElementById("book-title").innerText = "Ամրագրել հանդիպում";
-    document.getElementById("map-title").innerText = "Մեր գտնվելու վայրը";
-    document.getElementById("footer-text").innerText = "© 2026 «Բրայթ Սթեփս»";
-  } else {
-    location.reload(); // clean reset to English
-  }
+  en.forEach(e => e.style.display = (e.style.display === 'none') ? 'block' : 'none');
+  am.forEach(e => e.style.display = (e.style.display === 'none') ? 'block' : 'none');
 }
 
 function openAdvice(){
