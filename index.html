@@ -70,7 +70,7 @@ nav a {
   text-align:center;
 }
 
-/* SPECIALISTS */
+/* SPECIALISTS (UPDATED STYLE) */
 .services {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -78,20 +78,37 @@ nav a {
   max-width:1000px;
   margin:auto;
 }
-
+  
+/* NEW CARD STYLE (THEME COLOR) */
 .card {
-  background:linear-gradient(135deg,#ffffff,#F0FFF7);
+  background:linear-gradient(135deg,#A8D5BA,#E8FFF1);
   padding:25px;
   border-radius:18px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  box-shadow:0 10px 25px rgba(168,213,186,0.35);
+  color:#2f4f3f;
+  font-weight:600;
+  transition:0.3s ease;
+}
+  
+.card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 15px 30px rgba(168,213,186,0.5);
 }
 
+/* Highlight remains stronger */
 .card.highlight {
   transform:scale(1.05);
-  background:#DFFFEF;
-  border:2px solid #A8D5BA;
+  background:linear-gradient(135deg,#7fc9a6,#dfffee);
+  border:2px solid #ffffff;
 }
-
+  
+/* CENTER LAST CARD */
+.services .center-card {
+  grid-column:1 / -1;
+  justify-self:center;
+  width:260px;
+}
+  
 /* SLIDER */
 .slider {
   max-width:900px;
