@@ -27,7 +27,6 @@ header {
   top:0;
 }
 
-/* MENU */
 nav {
   display:flex;
   justify-content:center;
@@ -178,38 +177,43 @@ footer {
 <body>
 
 <header>
-  <div style="font-size:22px;font-weight:bold;">
+  <div style="font-size:22px;font-weight:bold;" 
+       data-en="Bright Steps Child Development Center"
+       data-am="«Բրայթ Սթեփս» երեխայի զարգացման կենտրոն">
     Bright Steps Child Development Center
   </div>
 
   <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About Us</a>
-    <a href="#" onclick="openAdvice()">Advice</a>
-    <a href="#booking">Book</a>
+    <a href="#home" data-en="Home" data-am="Գլխավոր">Home</a>
+    <a href="#about" data-en="About Us" data-am="Մեր մասին">About Us</a>
+    <a href="#" onclick="openAdvice()" data-en="Advice" data-am="Խորհուրդներ">Advice</a>
+    <a href="#booking" data-en="Book" data-am="Ամրագրում">Book</a>
     <button onclick="toggleLang()" class="lang-btn">ARM / ENG</button>
   </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <h2>Helping Children Grow with Confidence</h2>
+  <h2 data-en="Helping Children Grow with Confidence"
+      data-am="Օգնում ենք երեխաներին զարգանալ վստահությամբ">
+    Helping Children Grow with Confidence
+  </h2>
 </section>
 
 <!-- SPECIALISTS -->
 <section class="section">
-  <h2>Our Specialists</h2>
+  <h2 data-en="Our Specialists" data-am="Մեր մասնագետները">Our Specialists</h2>
 
   <div class="services">
-    <div class="card">Speech Therapist</div>
-    <div class="card">Social Worker</div>
-    <div class="card highlight">Art Therapy Specialist</div>
-    <div class="card">Social Pedagog</div>
-    <div class="card">Physical Education Specialist</div>
+    <div class="card" data-en="Speech Therapist" data-am="Խոսքի թերապևտ">Speech Therapist</div>
+    <div class="card" data-en="Social Worker" data-am="Սոցիալական աշխատող">Social Worker</div>
+    <div class="card highlight" data-en="Art Therapy Specialist" data-am="Արտ թերապիայի մասնագետ">Art Therapy Specialist</div>
+    <div class="card" data-en="Social Pedagog" data-am="Սոցիալական մանկավարժ">Social Pedagog</div>
+    <div class="card" data-en="Physical Education Specialist" data-am="Ֆիզիկական դաստիարակության մասնագետ">Physical Education Specialist</div>
   </div>
 </section>
 
-<!-- SLIDER -->
+<!-- SLIDER (UNCHANGED) -->
 <div class="slider">
   <div class="slides">
     <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/woman-teaching-kids-about-planets.jpg?v=1777238558">
@@ -226,31 +230,31 @@ footer {
 
 <!-- METHODS -->
 <section class="section">
-  <h2>Working Methods</h2>
+  <h2 data-en="Working Methods" data-am="Աշխատանքի մեթոդներ">Working Methods</h2>
 
   <div class="services">
-    <div class="card">Individual Sessions</div>
-    <div class="card">Group Sessions</div>
+    <div class="card" data-en="Individual Sessions" data-am="Անհատական պարապմունքներ">Individual Sessions</div>
+    <div class="card" data-en="Group Sessions" data-am="Խմբային պարապմունքներ">Group Sessions</div>
   </div>
 </section>
 
-<!-- ABOUT (FULL RESTORED TEXT) -->
+<!-- ABOUT -->
 <section class="section" id="about">
-  <h2>About Us</h2>
+  <h2 data-en="About Us" data-am="Մեր մասին">About Us</h2>
 
   <div class="about-container">
     <div class="about-text">
 
-      <p>
-        Bright Steps Child Development Center was founded in 2022 with a clear mission — to support every child’s unique developmental journey in a safe, caring, and professional environment. Our center was created with the belief that every child deserves individual attention, understanding, and the opportunity to grow with confidence.
+      <p data-en="Bright Steps Child Development Center was founded in 2022 with a clear mission — to support every child’s unique developmental journey in a safe, caring, and professional environment."
+         data-am="«Բրայթ Սթեփս» կենտրոնը հիմնադրվել է 2022 թվականին՝ նպատակ ունենալով ապահովել յուրաքանչյուր երեխայի ներդաշնակ զարգացումը անվտանգ, հոգատար և մասնագիտական միջավայրում։">
       </p>
 
-      <p>
-        Our main goal is to provide high-quality developmental support through a multidisciplinary approach. We work closely with families, combining professional expertise with empathy and respect. With the support of our local community and municipality, we have been able to build a welcoming space where children feel secure and parents feel supported.
+      <p data-en="Our main goal is to provide high-quality developmental support through a multidisciplinary approach."
+         data-am="Մեր հիմնական նպատակը բարձրորակ զարգացման աջակցություն ապահովելն է բազմամասնագիտական մոտեցմամբ։">
       </p>
 
-      <p>
-        Our approach is based on collaboration, play-based learning, and personalized care. We believe that strong communication between specialists and parents creates the best results, helping children develop socially, emotionally, and physically.
+      <p data-en="Our approach is based on collaboration, play-based learning, and personalized care."
+         data-am="Մեր մոտեցումը հիմնված է համագործակցության, խաղի միջոցով ուսուցման և անհատական մոտեցման վրա։">
       </p>
 
     </div>
@@ -263,46 +267,46 @@ footer {
 
 <!-- BOOKING -->
 <section class="section" id="booking">
-  <h2>Book Appointment</h2>
+  <h2 data-en="Book Appointment" data-am="Ամրագրել հանդիպում">Book Appointment</h2>
 
   <div class="form-box">
     <form action="https://formspree.io/f/YOUR_ID" method="POST">
-      <input type="text" name="name" placeholder="Parent Name" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <input type="tel" name="phone" placeholder="Phone" required>
-      <input type="date" name="date" required>
+      <input type="text" name="name" placeholder="Parent Name">
+      <input type="email" name="email" placeholder="Email">
+      <input type="tel" name="phone" placeholder="Phone">
+      <input type="date" name="date">
       <textarea name="message" placeholder="Child details"></textarea>
-      <button class="btn" type="submit">Send Request</button>
+      <button class="btn" type="submit" data-en="Send Request" data-am="Ուղարկել հարցում">Send Request</button>
     </form>
   </div>
 </section>
 
 <!-- MAP -->
 <section class="section">
-  <h2>Our Location</h2>
+  <h2 data-en="Our Location" data-am="Մեր գտնվելու վայրը">Our Location</h2>
 
   <iframe src="https://maps.google.com/maps?q=Vedi%20Armenia&z=13&output=embed"
   style="width:100%;height:300px;border:none;border-radius:15px;"></iframe>
 </section>
 
 <footer>
-  <p>© 2026 Bright Steps</p>
+  <p data-en="© 2026 Bright Steps" data-am="© 2026 «Բրայթ Սթեփս»">© 2026 Bright Steps</p>
 </footer>
 
 <script>
+let currentLang = 'en';
 
 function toggleLang(){
-  const en = document.querySelectorAll('.en');
-  const am = document.querySelectorAll('.am');
+  currentLang = currentLang === 'en' ? 'am' : 'en';
 
-  en.forEach(e => e.style.display = (e.style.display === 'none') ? 'block' : 'none');
-  am.forEach(e => e.style.display = (e.style.display === 'none') ? 'block' : 'none');
+  document.querySelectorAll('[data-en]').forEach(el=>{
+    el.textContent = el.getAttribute('data-' + currentLang);
+  });
 }
 
 function openAdvice(){
   window.open("advice.html","_blank");
 }
-
 </script>
 
 </body>
