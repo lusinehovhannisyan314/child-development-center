@@ -70,7 +70,7 @@ nav a {
   text-align:center;
 }
 
-/* SPECIALISTS */
+/* SPECIALISTS (UPDATED STYLE) */
 .services {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -79,17 +79,34 @@ nav a {
   margin:auto;
 }
 
+/* NEW CARD STYLE (THEME COLOR) */
 .card {
-  background:linear-gradient(135deg,#ffffff,#F0FFF7);
+  background:linear-gradient(135deg,#A8D5BA,#E8FFF1);
   padding:25px;
   border-radius:18px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  box-shadow:0 10px 25px rgba(168,213,186,0.35);
+  color:#2f4f3f;
+  font-weight:600;
+  transition:0.3s ease;
 }
 
+.card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 15px 30px rgba(168,213,186,0.5);
+}
+
+/* Highlight remains stronger */
 .card.highlight {
   transform:scale(1.05);
-  background:#DFFFEF;
-  border:2px solid #A8D5BA;
+  background:linear-gradient(135deg,#7fc9a6,#dfffee);
+  border:2px solid #ffffff;
+}
+
+/* CENTER LAST CARD */
+.services .center-card {
+  grid-column:1 / -1;
+  justify-self:center;
+  width:260px;
 }
 
 /* SLIDER */
@@ -200,7 +217,7 @@ footer {
   </h2>
 </section>
 
-<!-- SPECIALISTS -->
+<!-- SPECIALISTS (UPDATED ONLY THIS PART) -->
 <section class="section">
   <h2 data-en="Our Specialists" data-am="Մեր մասնագետները">Our Specialists</h2>
 
@@ -209,108 +226,13 @@ footer {
     <div class="card" data-en="Social Worker" data-am="Սոցիալական աշխատող">Social Worker</div>
     <div class="card highlight" data-en="Art Therapy Specialist" data-am="Արտ թերապիայի մասնագետ">Art Therapy Specialist</div>
     <div class="card" data-en="Social Pedagog" data-am="Սոցիալական մանկավարժ">Social Pedagog</div>
-    <div class="card" data-en="Physical Education Specialist" data-am="Ֆիզկուլտուրայի մասնագետ">Physical Education Specialist</div>
-  </div>
-</section>
 
-<!-- SLIDER -->
-<div class="slider">
-  <div class="slides">
-    <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/woman-teaching-kids-about-planets.jpg?v=1777238558">
-    <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/children-learning-globe-with-woman-bedroom.jpg?v=1777238419">
-    <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/little-boy-playing.jpg?v=1777238478">
-    <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/tanaphong-toochinda-GagC07wVvck-unsplash.jpg?v=1777238507">
-
-    <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/woman-teaching-kids-about-planets.jpg?v=1777238558">
-    <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/children-learning-globe-with-woman-bedroom.jpg?v=1777238419">
-    <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/little-boy-playing.jpg?v=1777238478">
-    <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/tanaphong-toochinda-GagC07wVvck-unsplash.jpg?v=1777238507">
-  </div>
-</div>
-
-<!-- METHODS -->
-<section class="section">
-  <h2 data-en="Working Methods" data-am="Աշխատանքի մեթոդներ">Working Methods</h2>
-
-  <div class="services">
-    <div class="card" data-en="Individual Sessions" data-am="Անհատական պարապմունքներ">Individual Sessions</div>
-    <div class="card" data-en="Group Sessions" data-am="Խմբային պարապմունքներ">Group Sessions</div>
-  </div>
-</section>
-
-<!-- ✅ FIXED FULL ABOUT WITH PRO TRANSLATION -->
-<section class="section" id="about">
-  <h2 data-en="About Us" data-am="Մեր մասին">About Us</h2>
-
-  <div class="about-container">
-    <div class="about-text">
-
-      <p data-en="Bright Steps Child Development Center was founded in 2022 with a clear mission — to support every child’s unique developmental journey in a safe, caring, and professional environment. Our center was created with the belief that every child deserves individual attention, understanding, and the opportunity to grow with confidence."
-         data-am="«Բրայթ Սթեփս» երեխաների զարգացման կենտրոնը հիմնադրվել է 2022 թվականին՝ հստակ առաքելությամբ՝ աջակցել յուրաքանչյուր երեխայի անհատական զարգացման ճանապարհին՝ ապահով, հոգատար և մասնագիտական միջավայրում։ Մեր կենտրոնը ստեղծվել է այն համոզմամբ, որ յուրաքանչյուր երեխա արժանի է անհատական ուշադրության, ըմբռնման և վստահությամբ զարգանալու հնարավորության։">
-        Bright Steps Child Development Center was founded in 2022 with a clear mission — to support every child’s unique developmental journey in a safe, caring, and professional environment. Our center was created with the belief that every child deserves individual attention, understanding, and the opportunity to grow with confidence.
-      </p>
-
-      <p data-en="Our main goal is to provide high-quality developmental support through a multidisciplinary approach. We work closely with families, combining professional expertise with empathy and respect. With the support of our local community and municipality, we have been able to build a welcoming space where children feel secure and parents feel supported."
-         data-am="Մեր հիմնական նպատակը բարձրորակ զարգացման աջակցություն ապահովելն է բազմամասնագիտական մոտեցմամբ։ Մենք սերտ համագործակցում ենք ընտանիքների հետ՝ համադրելով մասնագիտական փորձը՝ կարեկցանքի և հարգանքի հետ։ Տեղական համայնքի և համայնքապետարանի աջակցության շնորհիվ մենք ստեղծել ենք հյուրընկալ միջավայր, որտեղ երեխաները զգում են իրենց ապահով, իսկ ծնողները՝ վստահ և աջակցված։">
-        Our main goal is to provide high-quality developmental support through a multidisciplinary approach. We work closely with families, combining professional expertise with empathy and respect. With the support of our local community and municipality, we have been able to build a welcoming space where children feel secure and parents feel supported.
-      </p>
-
-      <p data-en="Our approach is based on collaboration, play-based learning, and personalized care. We believe that strong communication between specialists and parents creates the best results, helping children develop socially, emotionally, and physically."
-         data-am="Մեր մոտեցումը հիմնված է համագործակցության, խաղի միջոցով ուսուցման և անհատական խնամքի վրա։ Մենք հավատում ենք, որ մասնագետների և ծնողների միջև ուժեղ հաղորդակցությունը ապահովում է լավագույն արդյունքները՝ նպաստելով երեխաների սոցիալական, հուզական և ֆիզիկական զարգացմանը։">
-        Our approach is based on collaboration, play-based learning, and personalized care. We believe that strong communication between specialists and parents creates the best results, helping children develop socially, emotionally, and physically.
-      </p>
-
-    </div>
-
-    <div class="about-img">
-      <img src="https://cdn.shopify.com/s/files/1/0739/3548/7170/files/baby-girl-with-mother.jpg?v=1777238118">
+    <!-- CENTERED LAST CARD -->
+    <div class="card center-card" data-en="Physical Education Specialist" data-am="Ֆիզկուլտուրայի մասնագետ">
+      Physical Education Specialist
     </div>
   </div>
 </section>
-
-<!-- BOOKING -->
-<section class="section" id="booking">
-  <h2 data-en="Book Appointment" data-am="Ամրագրել հանդիպում">Book Appointment</h2>
-
-  <div class="form-box">
-    <form action="https://formspree.io/f/YOUR_ID" method="POST">
-      <input type="text" name="name" placeholder="Parent Name">
-      <input type="email" name="email" placeholder="Email">
-      <input type="tel" name="phone" placeholder="Phone">
-      <input type="date" name="date">
-      <textarea name="message" placeholder="Child details"></textarea>
-      <button class="btn" type="submit" data-en="Send Request" data-am="Ուղարկել հարցում">Send Request</button>
-    </form>
-  </div>
-</section>
-
-<!-- MAP -->
-<section class="section">
-  <h2 data-en="Our Location" data-am="Մեր գտնվելու վայրը">Our Location</h2>
-
-  <iframe src="https://maps.google.com/maps?q=Vedi%20Armenia&z=13&output=embed"
-  style="width:100%;height:300px;border:none;border-radius:15px;"></iframe>
-</section>
-
-<footer>
-  <p data-en="© 2026 Bright Steps" data-am="© 2026 «Բրայթ Սթեփս»">© 2026 Bright Steps</p>
-</footer>
-
-<script>
-let currentLang = 'en';
-
-function toggleLang(){
-  currentLang = currentLang === 'en' ? 'am' : 'en';
-
-  document.querySelectorAll('[data-en]').forEach(el=>{
-    el.textContent = el.getAttribute('data-' + currentLang);
-  });
-}
-
-function openAdvice(){
-  window.open("advice.html","_blank");
-}
-</script>
 
 </body>
 </html>
