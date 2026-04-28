@@ -108,6 +108,10 @@ nav a {
   justify-self: center;
   width: 220px;
 }
+  /* FIX Working Methods → always 2 cards side by side */
+.section:nth-of-type(4) .services {
+  grid-template-columns: repeat(2, 1fr);
+}
   
 /* SLIDER */
 .slider {
