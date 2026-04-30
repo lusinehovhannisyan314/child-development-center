@@ -192,19 +192,19 @@ footer {
   text-align:center;
   padding:20px;
 }
-
-  /* FIX Working Methods symmetry (2 cards side by side) */
-.section:nth-of-type(4) .services {
+  
+/* PERFECT FIX for Working Methods only */
+.methods {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
-/* prevent last-card centering here */
-.section:nth-of-type(4) .services .card:last-child {
+.methods .card:last-child {
   grid-column: auto;
   justify-self: stretch;
   width: auto;
 }
+  
 </style>
 </head>
 
@@ -266,7 +266,7 @@ footer {
 <section class="section">
   <h2 data-en="Working Methods" data-am="Աշխատանքի մեթոդներ">Working Methods</h2>
 
-  <div class="services">
+  <div class="services methods">
     <div class="card" data-en="Individual Sessions" data-am="Անհատական պարապմունքներ">Individual Sessions</div>
     <div class="card" data-en="Group Sessions" data-am="Խմբային պարապմունքներ">Group Sessions</div>
   </div>
