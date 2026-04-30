@@ -204,6 +204,67 @@ footer {
   justify-self: stretch;
   width: auto;
 }
+
+  /* =========================
+   MOBILE RESPONSIVE FIX
+========================= */
+@media (max-width: 768px) {
+
+  /* NAV */
+  nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 50px 15px;
+  }
+
+  .hero h2 {
+    font-size: 18px;
+  }
+
+  /* ABOUT → STACK */
+  .about-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-img img {
+    width: 90%;
+  }
+
+  /* SLIDER */
+  .slides img {
+    height: 250px;
+  }
+
+  /* CARDS */
+  .card {
+    padding: 18px;
+  }
+
+  /* WORKING METHODS */
+  .methods {
+    grid-template-columns: 1fr;
+  }
+
+  /* SPECIAL LAST CARD */
+  .services .card:last-child {
+    width: 100%;
+  }
+
+  /* FORM */
+  .form-box {
+    padding: 15px;
+  }
+
+}
   
 </style>
 </head>
