@@ -193,6 +193,19 @@ footer {
   padding:20px;
 }
 
+  /* FIX Working Methods symmetry (2 cards side by side) */
+.section:nth-of-type(4) .services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* prevent last-card centering here */
+.section:nth-of-type(4) .services .card:last-child {
+  grid-column: auto;
+  justify-self: stretch;
+  width: auto;
+}
+  
 </style>
 </head>
 
